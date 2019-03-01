@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LoginFragment">
+
+   <ImageView
+       android:id="@+id/logo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@mipmap/logo1"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="20sp"/>
+
+   <TextView
+       android:id="@+id/account"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/login_account"
+       android:layout_below="@id/logo"
+       android:textSize="22sp"
+       android:textStyle="bold"
+       android:textColor="@color/black"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15sp"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_below="@id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="20sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_below="@id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_marginTop="20sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/password"/>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_below="@id/et_password"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginLeft="30sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot"
+        android:layout_below="@id/btn_login"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        android:gravity="right"
+        android:layout_marginRight="30sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"/>
+
+    <View
+        android:layout_width="120sp"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        android:layout_below="@id/forgot_password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30sp"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10sp">
+        <TextView
+            android:id="@+id/not_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_register"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/singup"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignBaseline="@id/not_register"
+            android:layout_toRightOf="@id/not_register" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
