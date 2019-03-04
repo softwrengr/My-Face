@@ -8,6 +8,11 @@ import com.techeasesol.myface.R;
 
 public class GeneralUtils {
 
+    public static Fragment connectFragment(Context context,Fragment fragment){
+        ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).addToBackStack("true").commit();
+        return fragment;
+    }
+
     public static Fragment connectFragmentWithoutBack(Context context,Fragment fragment){
         ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
         return fragment;

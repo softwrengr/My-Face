@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.fragments.HomeFragment;
+import com.techeasesol.myface.fragments.SettingFragment;
 import com.techeasesol.myface.utilities.GeneralUtils;
 
 public class DrawerActivity extends AppCompatActivity
@@ -24,10 +25,11 @@ public class DrawerActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
+        this.setTitle("Cards");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        GeneralUtils.connectDrawerFragmentWithoutBack(this,new HomeFragment());
+        GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -77,17 +79,16 @@ public class DrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_home) {
+          GeneralUtils.connectDrawerFragmentWithoutBack(this,new HomeFragment());
+        } else if (id == R.id.nav_cards) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_setting) {
+            GeneralUtils.connectDrawerFragment(this,new SettingFragment());
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_rate_us) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_logout) {
 
         }
 

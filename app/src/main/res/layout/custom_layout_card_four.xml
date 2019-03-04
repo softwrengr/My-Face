@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:elevation="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250sp"
+            android:layout_margin="5sp"
+            android:background="@mipmap/card_background">
+
+            <LinearLayout
+                android:id="@+id/upper"
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/card_four_yellow" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/card_four_black" />
+                
+            </LinearLayout>
+            
+            <ImageView
+                android:id="@+id/card_four_image"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_below="@id/upper"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="20sp"
+                android:scaleType="fitXY"
+                android:background="@drawable/black_corner"
+                android:src="@mipmap/card_four_image"/>
+
+            <TextView
+                android:id="@+id/tv_card_four_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/card_four_image"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginLeft="10sp"
+                android:text="Card Name"/>
+
+            <TextView
+                android:id="@+id/tv_card_four_occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_four_name"
+                android:layout_toRightOf="@id/card_four_image"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppin_light"
+                android:text="Product Developer"/>
+
+            <TextView
+                android:id="@+id/tv_card_four_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_four_occupation"
+                android:layout_toRightOf="@id/card_four_image"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:fontFamily="@font/thin"
+                android:text="Your Address"/>
+
+            <TextView
+                android:id="@+id/tv_card_four_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_four_address"
+                android:layout_toRightOf="@id/card_four_image"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:fontFamily="@font/thin"
+                android:text="1111 2222 3333 4444"/>
+
+            <TextView
+                android:id="@+id/tv_card_four_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_four_no"
+                android:layout_toRightOf="@id/card_four_image"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:fontFamily="@font/thin"
+                android:text="softwrengr@gmail.com"/>
+
+            <LinearLayout
+                android:id="@+id/layout_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_above="@id/below_layout"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@+id/card_four_image">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@mipmap/card_four_fb"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_four_twitter"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_four_google"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_four_insta"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_four_in"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/below_layout"
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:layout_marginTop="10sp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/card_four_black" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/card_four_yellow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

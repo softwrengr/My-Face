@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    tools:context=".fragments.SettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_setting"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="50sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_premium"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="50sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tos"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="50sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/black"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:elevation="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250sp"
+            android:layout_margin="5sp"
+            android:background="@mipmap/card_background">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/black_layout"
+                android:gravity="center"
+                android:layout_marginBottom="10sp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:src="@mipmap/image"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/card_one_insta"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="20sp"
+                    android:src="@mipmap/instagram"
+                    android:layout_alignParentBottom="true"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/card_one_in"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="25sp"
+                    android:src="@mipmap/card_one_in"
+                    android:layout_toRightOf="@id/card_one_fb"
+                    android:layout_alignParentBottom="true"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/card_one_fb"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@mipmap/card_one_fb"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_above="@id/card_one_insta"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/card_one_google"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@mipmap/google_plus"
+                    android:layout_toRightOf="@+id/card_one_fb"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_above="@id/card_one_insta"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/card_one_twitter"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@mipmap/twitter"
+                    android:layout_toRightOf="@+id/card_one_google"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_above="@id/card_one_insta"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/profile_layout"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="10sp"
+                android:text="Card Name"/>
+
+            <TextView
+                android:id="@+id/tv_occupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toRightOf="@id/profile_layout"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppin_light"
+                android:text="Product Developer"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_occupation"
+                android:layout_toRightOf="@id/profile_layout"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:fontFamily="@font/thin"
+                android:text="Your Address"/>
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_address"
+                android:layout_toRightOf="@id/profile_layout"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:fontFamily="@font/thin"
+                android:text="1111 2222 3333 4444"/>
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_no"
+                android:layout_toRightOf="@id/profile_layout"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:fontFamily="@font/thin"
+                android:text="softwrengr@gmail.com"/>
+
+            <ImageView
+                android:id="@+id/iv_card"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_below="@id/tv_email"
+                android:layout_toRightOf="@id/profile_layout"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="10sp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/bar_code"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

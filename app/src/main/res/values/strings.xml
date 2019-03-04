@@ -10,6 +10,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- side menu text -->
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="cards">Cards</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="logout">Logout</string>
 
 
     <string name="register">Register Now</string>
@@ -23,6 +29,14 @@
     <string name="show">Show</string>
     <string name="login_account">Login Account</string>
     <string name="forgot">Forget Password</string>
+    <string name="choose_card">Choose Cards</string>
+    <string name="my_cards">My Cards</string>
+    <string name="shared_cards">Shared Cards</string>
+    <string name="want_connect">Wants to connect</string>
+    <string name="recieved_card">you have received a new card</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="tos">Terms &amp; Conditions</string>
 
 
 </resources>

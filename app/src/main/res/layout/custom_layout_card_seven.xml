@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:elevation="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250sp"
+            android:layout_margin="5sp"
+            android:background="@color/gray">
+
+            <ImageView
+                android:id="@+id/red_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/card_seven_red_bold"/>
+
+            <LinearLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/red_bold"
+                android:layout_marginTop="30sp"
+                android:layout_marginLeft="5sp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Kashif Taj"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppin_light"
+                    android:text="Product Developer"/>
+
+                <ImageView
+                    android:id="@+id/iv_card_seven"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/black_corner"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/image"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_info"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="30sp"
+                android:background="@color/white"
+                android:padding="15sp"
+                android:layout_toRightOf="@id/profile_layout"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:src="@mipmap/card_six_phone" />
+
+                    <TextView
+                        android:id="@+id/tv_card_seven_phone"
+                        android:layout_width="130sp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_card_six_name"
+                        android:layout_marginLeft="5sp"
+                        android:layout_toRightOf="@id/iv_card_six"
+                        android:fontFamily="@font/poppin_light"
+                        android:maxLines="1"
+                        android:text="Abdullah Khan"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:src="@mipmap/card_six_address" />
+
+                    <TextView
+                        android:id="@+id/tv_card_seven_address"
+                        android:layout_width="130sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:fontFamily="@font/poppin_light"
+                        android:maxLines="1"
+                        android:text="Softwrengr@gmail.com"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:src="@mipmap/card_six_location" />
+
+                    <TextView
+                        android:id="@+id/tv_card_seven_location"
+                        android:layout_width="130sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:fontFamily="@font/poppin_light"
+                        android:maxLines="1"
+                        android:text="Peshawar"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_info"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@mipmap/card_seven_fb" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_seven_insta" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_seven_in" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_seven_google" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@mipmap/card_seven_twitter" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:layout_marginTop="30sp"
+                android:scaleType="fitXY"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/card_seven_red_thin"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
