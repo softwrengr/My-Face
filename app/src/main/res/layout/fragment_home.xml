@@ -58,6 +58,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
+            <include
+                android:layout_marginTop="10sp"
+                layout="@layout/custom_layout_card_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
 
         </LinearLayout>
     </ScrollView>

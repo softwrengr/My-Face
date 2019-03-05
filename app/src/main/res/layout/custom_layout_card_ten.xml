@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:elevation="0dp"
+        app:cardCornerRadius="5sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20sp">
+
+                <ImageView
+                    android:id="@+id/iv_card_ten"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:src="@mipmap/image" />
+
+                <TextView
+                    android:id="@+id/tv_name_card_ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:layout_toRightOf="@id/iv_card_ten"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="KASHIF TAJ"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name_card_ten"
+                    android:layout_toRightOf="@id/iv_card_ten"
+                    android:fontFamily="@font/poppin_light"
+                    android:gravity="center"
+                    android:text="Business Developer"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/layout_profile">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/card_10_back"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30sp"
+                    android:layout_below="@id/layout_profile">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            >
+
+
+                            <LinearLayout
+                                android:id="@+id/address_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/card_10_address" />
+
+                                <TextView
+                                    android:id="@+id/tv_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10sp"
+                                    android:fontFamily="@font/thin"
+                                    android:text="your Address"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/address_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/address_layout"
+                                android:layout_marginTop="5sp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/card_10_address" />
+
+                                <TextView
+                                    android:id="@+id/tv_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10sp"
+                                    android:fontFamily="@font/thin"
+                                    android:text="1111 2222 3333 4444"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/address_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:layout_below="@id/address_email"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/card_10_address" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_toRightOf="@id/profile_layout"
+                                    android:fontFamily="@font/thin"
+                                    android:text="softwrengr@gmail.com"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/layout_social"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginLeft="10sp"
+                                android:layout_below="@+id/address_location"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="30sp"
+                                    android:layout_height="30sp"
+                                    android:layout_marginRight="5sp"
+                                    android:src="@mipmap/card_10_fb" />
+
+                                <ImageView
+                                    android:layout_width="30sp"
+                                    android:layout_height="30sp"
+                                    android:layout_marginRight="5sp"
+                                    android:src="@mipmap/card_10_twitter" />
+
+                                <ImageView
+                                    android:layout_width="30sp"
+                                    android:layout_height="30sp"
+                                    android:layout_marginRight="5sp"
+                                    android:src="@mipmap/card_10_google" />
+
+                                <ImageView
+                                    android:layout_width="30sp"
+                                    android:layout_height="30sp"
+                                    android:layout_marginRight="5sp"
+                                    android:src="@mipmap/card_10_insta" />
+
+                                <ImageView
+                                    android:layout_width="30sp"
+                                    android:layout_height="30sp"
+                                    android:src="@mipmap/card_10_in" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
