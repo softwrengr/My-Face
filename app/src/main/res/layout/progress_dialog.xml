@@ -2,21 +2,31 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:orientation="vertical"
     >
 
-    <ProgressBar
-        android:id="@+id/indeterminateBar"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_gravity="center"
-        android:indeterminateTint="@color/colorPrimary"
-        android:indeterminate="true"
-        android:indeterminateTintMode="src_atop"
-        android:indeterminateDrawable="@mipmap/progress"
-        />
+        android:background="@mipmap/pop_up"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/indeterminateBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateDrawable="@mipmap/progress"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

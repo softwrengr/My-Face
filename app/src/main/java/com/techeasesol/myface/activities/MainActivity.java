@@ -17,6 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.getSupportActionBar().hide();
 
-       GeneralUtils.connectFragmentWithoutBack(this,new LoginFragment());
+        if(GeneralUtils.isLogin(this)){
+            startActivity(new Intent(MainActivity.this,DrawerActivity.class));
+        }
+        else {
+            GeneralUtils.connectFragmentWithoutBack(this,new LoginFragment());
+        }
+
+
     }
 }
