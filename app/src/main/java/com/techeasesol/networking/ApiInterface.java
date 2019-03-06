@@ -3,6 +3,8 @@ package com.techeasesol.networking;
 
 import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
 import com.techeasesol.myface.models.loginDataModels.LoginResponseModel;
+import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleDetailModel;
+import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleResponseModel;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -33,6 +35,9 @@ public interface ApiInterface {
     @POST("login")
     Call<LoginResponseModel> userLogin(@Field("email") String email,
                                        @Field("password") String password);
+
+    @GET("usersNearBy")
+    Call<NearPeopleResponseModel> nearPeoples();
 
 
 //    @FormUrlEncoded

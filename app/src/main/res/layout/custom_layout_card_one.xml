@@ -16,6 +16,7 @@
 
 
         <RelativeLayout
+            android:id="@+id/layout_one"
             android:layout_width="wrap_content"
             android:layout_height="250sp"
             android:layout_margin="5sp"

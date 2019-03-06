@@ -7,8 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.Button;
 
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.utilities.GeneralUtils;
@@ -16,15 +15,17 @@ import com.techeasesol.myface.utilities.GeneralUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeFragment extends Fragment {
+
+public class UpdateInfoFragment extends Fragment {
     View view;
-    @BindView(R.id.layout_one)
-    RelativeLayout layoutCardOne;
+    @BindView(R.id.btn_update)
+    Button btnUpdate;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_home, container, false);
+        view =  inflater.inflate(R.layout.fragment_update_info, container, false);
+        getActivity().setTitle("Editing");
         initUI();
         return view;
     }
@@ -32,10 +33,10 @@ public class HomeFragment extends Fragment {
     private void initUI(){
         ButterKnife.bind(this,view);
 
-        layoutCardOne.setOnClickListener(new View.OnClickListener() {
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new YourCardFragment());
             }
         });
     }

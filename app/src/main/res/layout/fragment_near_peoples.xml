@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NearPeoplesFragment">
+
+
+    <EditText
+        android:id="@+id/et_search_peoples"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="10sp"
+        android:drawableLeft="@mipmap/clicked"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20sp"
+        android:hint="Search People"
+        android:drawablePadding="10sp"
+        android:background="@mipmap/edit_text"/>
+
+    <TextView
+        android:id="@+id/tv_near"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PEOPLE NEAR YOU"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="20sp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppin_light"
+        android:textStyle="bold"
+        android:layout_marginTop="5sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/et_search_peoples"/>
+
+   <android.support.v7.widget.RecyclerView
+       android:layout_below="@id/tv_near"
+       android:id="@+id/rv_near_peoples"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="25sp"
+       android:layout_marginRight="20sp"
+       android:layout_marginTop="10sp">
+
+   </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
