@@ -117,7 +117,8 @@ public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.N
     }
 
     @Override
-    public void onContactSelected(String s) {
+    public void onContactSelected(String shareID) {
+        GeneralUtils.putIntegerValueInEditor(getActivity(),"share_user_id",Integer.parseInt(shareID));
         new BottomSheetClass().show(getActivity().getSupportFragmentManager(), "open");
     }
 

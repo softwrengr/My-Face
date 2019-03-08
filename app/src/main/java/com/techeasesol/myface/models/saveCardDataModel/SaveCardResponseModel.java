@@ -3,6 +3,8 @@ package com.techeasesol.myface.models.saveCardDataModel;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class SaveCardResponseModel {
     @SerializedName("status")
     @Expose
@@ -12,7 +14,7 @@ public class SaveCardResponseModel {
     private String message;
     @SerializedName("data")
     @Expose
-    private SaveCardDataModel data;
+    private List<SaveCardDataModel> data = null;
     @SerializedName("code")
     @Expose
     private Integer code;
@@ -33,11 +35,11 @@ public class SaveCardResponseModel {
         this.message = message;
     }
 
-    public SaveCardDataModel getData() {
+    public List<SaveCardDataModel> getData() {
         return data;
     }
 
-    public void setData(SaveCardDataModel data) {
+    public void setData(List<SaveCardDataModel> data) {
         this.data = data;
     }
 

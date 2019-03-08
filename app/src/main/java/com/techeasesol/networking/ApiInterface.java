@@ -2,6 +2,9 @@ package com.techeasesol.networking;
 
 
 import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
+import com.techeasesol.myface.models.saveCardDataModel.SaveCardResponseModel;
+import com.techeasesol.myface.models.sendCardDataModel.SendCardResponseModel;
+import com.techeasesol.myface.models.shareCardDataModels.ShareResponseModel;
 import com.techeasesol.myface.models.updateCardDataModel.AddCardResponseModel;
 import com.techeasesol.myface.models.cardDataModel.CardResponseModel;
 import com.techeasesol.myface.models.loginDataModels.LoginResponseModel;
@@ -45,6 +48,15 @@ public interface ApiInterface {
     @GET("getCardDetail?")
     Call<CardResponseModel> getCardDetail(@Query("id") int id);
 
+    @FormUrlEncoded
+    @POST("saveCard?")
+    Call<CardResponseModel> saveCard(@Field("id") int id);
+
+    @FormUrlEncoded
+    @POST("shareCard")
+    Call<SendCardResponseModel> shareCard(@Field("shareWithUserId") int userID,
+                                          @Field("userCardId") int userCardID);
+
     @Multipart
     @POST("addCardDetail")
     Call<AddCardResponseModel> updateCard(@Part("cardNumber") int id,
@@ -61,6 +73,9 @@ public interface ApiInterface {
                                           @Part("youtube") RequestBody youtube,
                                           @Part MultipartBody.Part photo,
                                           @Part("picture") RequestBody fileName);
+
+    @GET("getSavedCards")
+    Call<SaveCardResponseModel> savedCards();
 
 
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
@@ -31,7 +32,7 @@
                     android:src="@mipmap/image" />
 
                 <TextView
-                    android:id="@+id/tv_name_card_ten"
+                    android:id="@+id/tv_card_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
@@ -44,9 +45,10 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_card_post"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_name_card_ten"
+                    android:layout_below="@id/tv_card_name"
                     android:layout_toRightOf="@id/iv_card_ten"
                     android:fontFamily="@font/poppin_light"
                     android:gravity="center"
@@ -98,7 +100,7 @@
                                     android:src="@mipmap/card_10_address" />
 
                                 <TextView
-                                    android:id="@+id/tv_address"
+                                    android:id="@+id/tv_card_email"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10sp"
@@ -151,7 +153,7 @@
 
 
                                 <TextView
-                                    android:id="@+id/tv_email"
+                                    android:id="@+id/tv_card_address"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10sp"
@@ -220,4 +222,53 @@
 
     </android.support.v7.widget.CardView>
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/save_share_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_save_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Card"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_share_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share Card"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

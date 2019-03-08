@@ -22,7 +22,7 @@ public class SaveCardDataModel {
     private String email;
     @SerializedName("saved")
     @Expose
-    private Integer saved;
+    private String saved;
     @SerializedName("picture")
     @Expose
     private String picture;
@@ -37,16 +37,16 @@ public class SaveCardDataModel {
     private String address;
     @SerializedName("facebook")
     @Expose
-    private Object facebook;
+    private String facebook;
     @SerializedName("twitter")
     @Expose
-    private String twitter;
+    private Object twitter;
     @SerializedName("youtube")
     @Expose
     private String youtube;
     @SerializedName("instagram")
     @Expose
-    private String instagram;
+    private Object instagram;
     @SerializedName("skype")
     @Expose
     private String skype;
@@ -100,11 +100,11 @@ public class SaveCardDataModel {
         this.email = email;
     }
 
-    public Integer getSaved() {
+    public String getSaved() {
         return saved;
     }
 
-    public void setSaved(Integer saved) {
+    public void setSaved(String saved) {
         this.saved = saved;
     }
 
@@ -140,19 +140,19 @@ public class SaveCardDataModel {
         this.address = address;
     }
 
-    public Object getFacebook() {
+    public String getFacebook() {
         return facebook;
     }
 
-    public void setFacebook(Object facebook) {
+    public void setFacebook(String facebook) {
         this.facebook = facebook;
     }
 
-    public String getTwitter() {
+    public Object getTwitter() {
         return twitter;
     }
 
-    public void setTwitter(String twitter) {
+    public void setTwitter(Object twitter) {
         this.twitter = twitter;
     }
 
@@ -164,11 +164,11 @@ public class SaveCardDataModel {
         this.youtube = youtube;
     }
 
-    public String getInstagram() {
+    public Object getInstagram() {
         return instagram;
     }
 
-    public void setInstagram(String instagram) {
+    public void setInstagram(Object instagram) {
         this.instagram = instagram;
     }
 

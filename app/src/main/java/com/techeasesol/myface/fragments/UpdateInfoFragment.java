@@ -123,7 +123,6 @@ public class UpdateInfoFragment extends Fragment {
                     apiCallUpdateCardInfo();
                 }
 
-
             }
         });
     }
@@ -193,6 +192,7 @@ public class UpdateInfoFragment extends Fragment {
                         Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else if (response.body().getStatus()) {
+                    GeneralUtils.putIntegerValueInEditor(getActivity(), "card_no", response.body().getData().getId());
                     GeneralUtils.connectDrawerFragment(getActivity(), new YourCardFragment());
                 }
 

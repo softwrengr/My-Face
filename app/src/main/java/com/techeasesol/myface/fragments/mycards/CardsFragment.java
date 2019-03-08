@@ -1,7 +1,5 @@
 package com.techeasesol.myface.fragments.mycards;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,7 +25,7 @@ public class CardsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_cards, container, false);
-        GeneralUtils.connectCardsFragmentWithBack(getActivity(),new MyAllCardsFragment());
+        GeneralUtils.connectCardsFragmentWithBack(getActivity(),new AllSavedCardsFragment());
         initUI();
         return view;
     }
@@ -38,7 +36,7 @@ public class CardsFragment extends Fragment {
         btnMyCards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.connectCardsFragmentWithBack(getActivity(),new MyAllCardsFragment());
+                GeneralUtils.connectCardsFragmentWithBack(getActivity(),new AllSavedCardsFragment());
             }
         });
 

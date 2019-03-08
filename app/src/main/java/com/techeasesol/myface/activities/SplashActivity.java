@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.firebase.MyJobService;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,6 +16,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         this.getSupportActionBar().hide();
+
+        startService(new Intent(this, MyJobService.class));
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

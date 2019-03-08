@@ -11,6 +11,7 @@ import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,9 +22,23 @@ import android.widget.Toast;
 
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.fragments.AboutSendFragment;
+import com.techeasesol.myface.fragments.mycards.CardsFragment;
+import com.techeasesol.myface.models.cardDataModel.CardResponseModel;
+import com.techeasesol.myface.models.sendCardDataModel.SendCardResponseModel;
+import com.techeasesol.myface.models.shareCardDataModels.ShareResponseModel;
+import com.techeasesol.myface.utilities.AlertUtils;
 import com.techeasesol.myface.utilities.GeneralUtils;
+import com.techeasesol.networking.ApiClient;
+import com.techeasesol.networking.ApiInterface;
+
+import org.json.JSONObject;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class BottomSheetClass extends BottomSheetDialogFragment {
+    AlertDialog alertDialog;
     private BottomSheetListener mListener;
     private static BottomSheetBehavior bottomSheetBehavior;
     private static View bottomSheetInternal;
@@ -57,7 +72,10 @@ public class BottomSheetClass extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
 //                mListener.onButtonClicked("clicked");
-                GeneralUtils.connectDrawerFragment(getActivity(),new AboutSendFragment());
+                alertDialog = AlertUtils.createProgressDialog(getActivity());
+                alertDialog.show();
+                apiCallSendCard();
+
             }
         });
         return view;
@@ -65,6 +83,36 @@ public class BottomSheetClass extends BottomSheetDialogFragment {
 
     public interface BottomSheetListener {
         void onButtonClicked(String message);
+    }
+
+    private void apiCallSendCard() {
+        ApiInterface services = ApiClient.getApiClient(GeneralUtils.getApiToken(getActivity())).create(ApiInterface.class);
+        Call<SendCardResponseModel> shareCard = services.shareCard(11, 13);
+        shareCard.enqueue(new Callback<SendCardResponseModel>() {
+            @Override
+            public void onResponse(Call<SendCardResponseModel> call, Response<SendCardResponseModel> response) {
+                alertDialog.dismiss();
+                if (response.body() == null) {
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+                } else if (response.body().getStatus()) {
+                    Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    GeneralUtils.connectDrawerFragment(getActivity(), new AboutSendFragment());
+                    getDialog().dismiss();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SendCardResponseModel> call, Throwable t) {
+                alertDialog.dismiss();
+                Toast.makeText(getActivity(), t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

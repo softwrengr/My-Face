@@ -69,7 +69,7 @@ public class HomeFragment extends Fragment {
         cardSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",5);
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",6);
                 GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
             }
         });

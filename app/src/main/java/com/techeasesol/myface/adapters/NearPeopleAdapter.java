@@ -47,9 +47,9 @@ public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.My
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        final NearPeopleDetailModel contact = listFiltered.get(position);
-        holder.name.setText(contact.getName());
-        holder.phone.setText(contact.getEmail());
+        final NearPeopleDetailModel model = listFiltered.get(position);
+        holder.name.setText(model.getName());
+        holder.phone.setText(model.getEmail());
         holder.checkBox.setChecked(false);
 
 
@@ -58,7 +58,7 @@ public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.My
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     holder.checkBox.setBackground(context.getResources().getDrawable(R.mipmap.clicked));
-                    listener.onContactSelected(contact.getName());
+                    listener.onContactSelected(model.getId());
                 }
                 else {
                     Toast.makeText(context, "please select one user", Toast.LENGTH_SHORT).show();

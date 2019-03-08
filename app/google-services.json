@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "782293696806",
+    "firebase_url": "https://my-face-634d2.firebaseio.com",
+    "project_id": "my-face-634d2",
+    "storage_bucket": "my-face-634d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782293696806:android:373e7ed8b25ad8d0",
+        "android_client_info": {
+          "package_name": "com.techeasesol.myface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782293696806-uu1nrtg1ikhg70kft4l1462615gfgp3c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techeasesol.myface",
+            "certificate_hash": "8a49158720a2ebae8039b7b3d30cebe77f89f196"
+          }
+        },
+        {
+          "client_id": "782293696806-5360u0630tra0tb518soh3ekhkl19lbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBDqxqQwils5FomAVdBWyuVJ7pNoxcFZo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782293696806-5360u0630tra0tb518soh3ekhkl19lbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
