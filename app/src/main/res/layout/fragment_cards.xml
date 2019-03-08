@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.mycards.CardsFragment">
+
+ <LinearLayout
+     android:id="@+id/buttons_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:gravity="center"
+     android:layout_marginTop="10sp"
+     android:orientation="horizontal">
+     <Button
+         android:id="@+id/btn_my_cards"
+         android:layout_width="120sp"
+         android:layout_height="wrap_content"
+         android:textColor="@color/colorPrimary"
+         android:layout_marginLeft="20sp"
+         android:textAllCaps="false"
+         android:background="@drawable/gray_corner"
+         android:text="My Cards"/>
+
+     <Button
+         android:id="@+id/btn_shared_cards"
+         android:layout_width="120sp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_marginLeft="20sp"
+         android:background="@drawable/black_corner"
+         android:textAllCaps="false"
+         android:text="Shared Cards"/>
+ </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/buttons_layout"
+        android:id="@+id/my_card_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp">
+
+    </RelativeLayout>
+
+</RelativeLayout>

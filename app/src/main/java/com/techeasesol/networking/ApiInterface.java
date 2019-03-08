@@ -2,8 +2,9 @@ package com.techeasesol.networking;
 
 
 import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
+import com.techeasesol.myface.models.updateCardDataModel.AddCardResponseModel;
+import com.techeasesol.myface.models.cardDataModel.CardResponseModel;
 import com.techeasesol.myface.models.loginDataModels.LoginResponseModel;
-import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleDetailModel;
 import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleResponseModel;
 
 import okhttp3.MultipartBody;
@@ -34,75 +35,33 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("login")
     Call<LoginResponseModel> userLogin(@Field("email") String email,
-                                       @Field("password") String password);
+                                       @Field("password") String password,
+                                       @Field("latitude") String latitude,
+                                       @Field("longitude") String longitude);
 
     @GET("usersNearBy")
     Call<NearPeopleResponseModel> nearPeoples();
 
+    @GET("getCardDetail?")
+    Call<CardResponseModel> getCardDetail(@Query("id") int id);
 
-//    @FormUrlEncoded
-//    @POST("verifyCode")
-//    Call<VerifyResponseModel> userVerification(@Field("code") String code);
-//
-//    @POST("sendCode")
-//    Call<ResendCodeModel> resendCode();
-//
-//    @FormUrlEncoded
-//    @POST("getItems")
-//    Call<ItemResponseModel> getItems(@Field("latitude") String lat,
-//                                     @Field("longitude") String lng);
-//
-//    @GET("getItem?")
-//    Call<ItemResponseModel> getResturants(@Query("id") int id);
-//
-//    @GET("userProfile")
-//    Call<ProfileResponseModel> getUserProfile();
-//
-//    @FormUrlEncoded
-//    @POST("updateProfile")
-//    Call<ProfileUpdateResponseModel> updateProfile(@Field("name") String name,
-//                                                   @Field("phoneNumber") String number,
-//                                                   @Field("email") String email);
-//
-//    @Multipart
-//    @POST("updateProfilePicture")
-//    Call<ProfileImageResponseModel> updateProfilePicture(@Part MultipartBody.Part photo,
-//                                                         @Part("profilePicture") RequestBody fileName);
-//    @FormUrlEncoded
-//    @POST("getItems/search")
-//    Call<ItemResponseModel> getFiltersItems(@Field("price") String category,
-//                                            @Field("category") String price,
-//                                            @Field("latitude") String lat,
-//                                            @Field("longitude") String lng);
-//
-//
-//    @FormUrlEncoded
-//    @POST("resetPassword")
-//    Call<ForgotPasswordModel> resetPassword(@Field("email") String email);
-//
-//    @FormUrlEncoded
-//    @POST("resetPasswordVerify")
-//    Call<VerifyCodeResponseModel> verifyPasswordCode(@Field("code") String code,
-//                                                     @Field("email") String email);
-//
-//    @FormUrlEncoded
-//    @POST("changePassword")
-//    Call<ChangePasswordModel> changePassword(@Field("newPassword") String code,
-//                                             @Field("confirmPassword") String email);
-//
-//    @FormUrlEncoded
-//    @POST("addMoreInfo")
-//    Call<MoreInfoProfileModel> addMoreInfo(@Field("gender") String code,
-//                                           @Field("age") String age,
-//                                           @Field("height") String height,
-//                                           @Field("weight") String weight,
-//                                           @Field("profession") String profession,
-//                                           @Field("lifeStyle") String lifeStyle,
-//                                           @Field("address") String address);
-//
-//    @FormUrlEncoded
-//    @POST("addTravelInfo")
-//    Call<TravelReponseModel> travelInfo(@Field("travel") String walk);
+    @Multipart
+    @POST("addCardDetail")
+    Call<AddCardResponseModel> updateCard(@Part("cardNumber") int id,
+                                          @Part("name") RequestBody name,
+                                          @Part("phoneNumber") RequestBody number,
+                                          @Part("email") RequestBody email,
+                                          @Part("designation") RequestBody password,
+                                          @Part("address") RequestBody passwordConfirmation,
+                                          @Part("facebook") RequestBody phoneNumber,
+                                          @Part("twitter") RequestBody deviceType,
+                                          @Part("instagram") RequestBody lat,
+                                          @Part("linkedin") RequestBody lon,
+                                          @Part("skype") RequestBody skype,
+                                          @Part("youtube") RequestBody youtube,
+                                          @Part MultipartBody.Part photo,
+                                          @Part("picture") RequestBody fileName);
+
 
 
     //use this for query request

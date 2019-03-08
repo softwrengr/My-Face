@@ -17,13 +17,15 @@
         android:layout_marginLeft="20sp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/iv_for_card"
+            android:layout_width="80sp"
+            android:layout_height="60sp"
             android:src="@mipmap/cam"
+            android:layout_marginTop="10sp"
             android:layout_gravity="center"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -33,7 +35,7 @@
             android:hint="@string/name"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_post"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -43,27 +45,27 @@
             android:hint="Post/Designation"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
             android:layout_marginTop="5sp"
             android:background="@mipmap/edit_text"
-            android:inputType="text"
+            android:inputType="number"
             android:hint="Phone Number"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
             android:layout_marginTop="5sp"
             android:background="@mipmap/edit_text"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:hint="Email"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -73,7 +75,7 @@
             android:hint="Address"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -83,7 +85,7 @@
             android:hint="Facebook"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_twitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -93,7 +95,7 @@
             android:hint="Twitter"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_youtube"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -103,7 +105,7 @@
             android:hint="Youtube"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_instagram"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -113,7 +115,7 @@
             android:hint="Instagram"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_skype"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -123,7 +125,7 @@
             android:hint="Skype"/>
 
         <EditText
-            android:layout_below="@id/account"
+            android:id="@+id/et_card_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"

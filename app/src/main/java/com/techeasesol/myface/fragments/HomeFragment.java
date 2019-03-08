@@ -18,8 +18,18 @@ import butterknife.ButterKnife;
 
 public class HomeFragment extends Fragment {
     View view;
-    @BindView(R.id.layout_one)
-    RelativeLayout layoutCardOne;
+    @BindView(R.id.card_one)
+    RelativeLayout cardOne;
+    @BindView(R.id.card_three)
+    RelativeLayout cardThree;
+    @BindView(R.id.card_four)
+    RelativeLayout cardFour;
+    @BindView(R.id.card_six)
+    RelativeLayout cardSix;
+    @BindView(R.id.card_seven)
+    RelativeLayout cardSeven;
+    @BindView(R.id.card_ten)
+    RelativeLayout cardTen;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,9 +42,50 @@ public class HomeFragment extends Fragment {
     private void initUI(){
         ButterKnife.bind(this,view);
 
-        layoutCardOne.setOnClickListener(new View.OnClickListener() {
+        cardOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",1);
+                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",3);
+                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",4);
+                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",5);
+                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardSeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",7);
+                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardTen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",10);
                 GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
             }
         });

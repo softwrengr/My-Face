@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.adapters.NearPeopleAdapter;
+import com.techeasesol.myface.classes.BottomSheetClass;
 import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleDetailModel;
 import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleResponseModel;
 import com.techeasesol.myface.utilities.AlertUtils;
@@ -35,7 +36,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.NearPeopleAdapterListener {
+public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.NearPeopleAdapterListener{
     View view;
     AlertDialog alertDialog;
     @BindView(R.id.rv_near_peoples)
@@ -45,7 +46,8 @@ public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.N
     ArrayList<NearPeopleDetailModel> nearPeopleDetailModelArrayList;
     NearPeopleAdapter nearPeopleAdapter;
 
-    String strToken,strSearchPeoples;
+    String strToken, strSearchPeoples;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,42 +55,40 @@ public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.N
         view = inflater.inflate(R.layout.fragment_near_peoples, container, false);
         getActivity().setTitle("Share Card");
         initUI();
+
         return view;
     }
 
-    private void initUI(){
+    private void initUI() {
         strToken = GeneralUtils.getApiToken(getActivity());
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         rvNearPeoples.setLayoutManager(linearLayoutManager);
         nearPeopleDetailModelArrayList = new ArrayList<>();
         alertDialog = AlertUtils.createProgressDialog(getActivity());
         alertDialog.show();
-        nearPeopleAdapter = new NearPeopleAdapter(getActivity(), nearPeopleDetailModelArrayList,this);
+        nearPeopleAdapter = new NearPeopleAdapter(getActivity(), nearPeopleDetailModelArrayList, this);
         rvNearPeoples.setAdapter(nearPeopleAdapter);
         apiCallNearPeoples();
+
 
         etSearchPeoples.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
-
             @Override
             public void afterTextChanged(Editable s) {
-             strSearchPeoples = etSearchPeoples.getText().toString();
-             nearPeopleAdapter.getFilter().filter(strSearchPeoples);
+                strSearchPeoples = etSearchPeoples.getText().toString();
+                nearPeopleAdapter.getFilter().filter(strSearchPeoples);
             }
         });
 
     }
 
-    private void apiCallNearPeoples(){
+    private void apiCallNearPeoples() {
         ApiInterface services = ApiClient.getApiClient(strToken).create(ApiInterface.class);
         Call<NearPeopleResponseModel> allUsers = services.nearPeoples();
         allUsers.enqueue(new Callback<NearPeopleResponseModel>() {
@@ -103,15 +103,10 @@ public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.N
                         Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else if (response.body().getStatus()) {
-
                     nearPeopleDetailModelArrayList.addAll(response.body().getData());
-
                     nearPeopleAdapter.notifyDataSetChanged();
 
-                } else {
-                    Toast.makeText(getActivity(), "No Data Found", Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
@@ -122,7 +117,8 @@ public class NearPeoplesFragment extends Fragment implements NearPeopleAdapter.N
     }
 
     @Override
-    public void onContactSelected(NearPeopleDetailModel nearPeopleDetailModel) {
-        Toast.makeText(getActivity(), nearPeopleDetailModel.getName(), Toast.LENGTH_SHORT).show();
+    public void onContactSelected(String s) {
+        new BottomSheetClass().show(getActivity().getSupportFragmentManager(), "open");
     }
+
 }

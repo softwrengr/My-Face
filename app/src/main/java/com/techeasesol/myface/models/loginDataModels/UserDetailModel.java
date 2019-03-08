@@ -15,34 +15,34 @@ public class UserDetailModel {
     private String email;
     @SerializedName("profilePicture")
     @Expose
-    private String profilePicture;
+    private Object profilePicture;
     @SerializedName("phoneNumber")
     @Expose
-    private String phoneNumber;
+    private Object phoneNumber;
     @SerializedName("designation")
     @Expose
-    private String designation;
+    private Object designation;
     @SerializedName("address")
     @Expose
-    private String address;
+    private Object address;
     @SerializedName("facebook")
     @Expose
-    private String facebook;
+    private Object facebook;
     @SerializedName("twitter")
     @Expose
-    private String twitter;
+    private Object twitter;
     @SerializedName("youtube")
     @Expose
-    private String youtube;
+    private Object youtube;
     @SerializedName("instagram")
     @Expose
-    private String instagram;
+    private Object instagram;
     @SerializedName("skype")
     @Expose
-    private String skype;
+    private Object skype;
     @SerializedName("linkedin")
     @Expose
-    private String linkedin;
+    private Object linkedin;
     @SerializedName("latitude")
     @Expose
     private String latitude;
@@ -95,83 +95,83 @@ public class UserDetailModel {
         this.email = email;
     }
 
-    public String getProfilePicture() {
+    public Object getProfilePicture() {
         return profilePicture;
     }
 
-    public void setProfilePicture(String profilePicture) {
+    public void setProfilePicture(Object profilePicture) {
         this.profilePicture = profilePicture;
     }
 
-    public String getPhoneNumber() {
+    public Object getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(Object phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getDesignation() {
+    public Object getDesignation() {
         return designation;
     }
 
-    public void setDesignation(String designation) {
+    public void setDesignation(Object designation) {
         this.designation = designation;
     }
 
-    public String getAddress() {
+    public Object getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Object address) {
         this.address = address;
     }
 
-    public String getFacebook() {
+    public Object getFacebook() {
         return facebook;
     }
 
-    public void setFacebook(String facebook) {
+    public void setFacebook(Object facebook) {
         this.facebook = facebook;
     }
 
-    public String getTwitter() {
+    public Object getTwitter() {
         return twitter;
     }
 
-    public void setTwitter(String twitter) {
+    public void setTwitter(Object twitter) {
         this.twitter = twitter;
     }
 
-    public String getYoutube() {
+    public Object getYoutube() {
         return youtube;
     }
 
-    public void setYoutube(String youtube) {
+    public void setYoutube(Object youtube) {
         this.youtube = youtube;
     }
 
-    public String getInstagram() {
+    public Object getInstagram() {
         return instagram;
     }
 
-    public void setInstagram(String instagram) {
+    public void setInstagram(Object instagram) {
         this.instagram = instagram;
     }
 
-    public String getSkype() {
+    public Object getSkype() {
         return skype;
     }
 
-    public void setSkype(String skype) {
+    public void setSkype(Object skype) {
         this.skype = skype;
     }
 
-    public String getLinkedin() {
+    public Object getLinkedin() {
         return linkedin;
     }
 
-    public void setLinkedin(String linkedin) {
+    public void setLinkedin(Object linkedin) {
         this.linkedin = linkedin;
     }
 

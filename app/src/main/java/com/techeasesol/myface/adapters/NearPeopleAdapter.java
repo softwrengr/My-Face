@@ -3,22 +3,27 @@ package com.techeasesol.myface.adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.classes.BottomSheetClass;
 import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleDetailModel;
+import com.techeasesol.myface.utilities.GeneralUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.MyViewHolder>
-        implements Filterable {
+public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.MyViewHolder> implements Filterable {
     private Context context;
     private List<NearPeopleDetailModel> nearPeopleDetailModelList;
     private List<NearPeopleDetailModel> listFiltered;
@@ -41,10 +46,25 @@ public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.My
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final NearPeopleDetailModel contact = listFiltered.get(position);
         holder.name.setText(contact.getName());
         holder.phone.setText(contact.getEmail());
+        holder.checkBox.setChecked(false);
+
+
+        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    holder.checkBox.setBackground(context.getResources().getDrawable(R.mipmap.clicked));
+                    listener.onContactSelected(contact.getName());
+                }
+                else {
+                    Toast.makeText(context, "please select one user", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
@@ -65,8 +85,6 @@ public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.My
                     List<NearPeopleDetailModel> filteredList = new ArrayList<>();
                     for (NearPeopleDetailModel row : nearPeopleDetailModelList) {
 
-                        // name match condition. this might differ depending on your requirement
-                        // here we are looking for name or phone number match
                         if (row.getName().toLowerCase().contains(charString.toLowerCase()) || row.getEmail().contains(charSequence)) {
                             filteredList.add(row);
                         }
@@ -88,26 +106,24 @@ public class NearPeopleAdapter extends RecyclerView.Adapter<NearPeopleAdapter.My
         };
     }
 
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView name, phone;
+        CheckBox checkBox;
 
         public MyViewHolder(View view) {
             super(view);
             name = view.findViewById(R.id.tv_user_name);
             phone = view.findViewById(R.id.tv_user_email);
+            checkBox = view.findViewById(R.id.checkbox);
 
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // send selected contact in callback
-                    listener.onContactSelected(listFiltered.get(getAdapterPosition()));
-                }
-            });
         }
     }
 
 
     public interface NearPeopleAdapterListener {
-        void onContactSelected(NearPeopleDetailModel contact);
+        void onContactSelected(String message);
     }
+
+
 }

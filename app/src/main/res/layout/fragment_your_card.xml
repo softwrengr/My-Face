@@ -6,8 +6,42 @@
     android:orientation="vertical"
     tools:context=".fragments.YourCardFragment">
 
-    <include
-        layout="@layout/custom_layout_card_one"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250sp">
+
+        <ViewFlipper
+            android:id="@+id/vf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <include
+                android:id="@+id/one"
+                layout="@layout/custom_layout_card_one" />
+
+            <include
+                android:id="@+id/three"
+                layout="@layout/custom_layout_card_three" />
+
+            <include
+                android:id="@+id/four"
+                layout="@layout/custom_layout_card_four" />
+
+            <include
+                android:id="@+id/six"
+                layout="@layout/custom_layout_card_six" />
+
+            <include
+                android:id="@+id/seven"
+                layout="@layout/custom_layout_card_seven" />
+
+            <include
+                android:id="@+id/ten"
+                layout="@layout/custom_layout_card_ten" />
+
+        </ViewFlipper>
+    </RelativeLayout>
 
 
     <LinearLayout
@@ -27,33 +61,33 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/save"/>
+                android:src="@mipmap/save" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save Card"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_share_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginLeft="50sp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/share"/>
+                android:src="@mipmap/share" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Share Card"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 

@@ -15,9 +15,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.classes.BottomSheetClass;
 import com.techeasesol.myface.fragments.HomeFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
 import com.techeasesol.myface.fragments.SettingFragment;
+import com.techeasesol.myface.fragments.mycards.CardsFragment;
 import com.techeasesol.myface.utilities.GeneralUtils;
 
 public class DrawerActivity extends AppCompatActivity
@@ -28,24 +30,25 @@ public class DrawerActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
         this.setTitle("Cards");
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -84,7 +87,7 @@ public class DrawerActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
           GeneralUtils.connectDrawerFragmentWithoutBack(this,new HomeFragment());
         } else if (id == R.id.nav_cards) {
-            GeneralUtils.connectDrawerFragmentWithoutBack(this,new NearPeoplesFragment());
+            GeneralUtils.connectDrawerFragment(this,new CardsFragment());
         } else if (id == R.id.nav_setting) {
             GeneralUtils.connectDrawerFragment(this,new SettingFragment());
 
@@ -95,7 +98,7 @@ public class DrawerActivity extends AppCompatActivity
             startActivity(new Intent(DrawerActivity.this,MainActivity.class));
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

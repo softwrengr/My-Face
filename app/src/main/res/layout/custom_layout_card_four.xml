@@ -14,6 +14,7 @@
 
 
         <RelativeLayout
+            android:id="@+id/card_four"
             android:layout_width="wrap_content"
             android:layout_height="250sp"
             android:layout_margin="5sp"
@@ -51,7 +52,7 @@
                 android:src="@mipmap/card_four_image"/>
 
             <TextView
-                android:id="@+id/tv_card_four_name"
+                android:id="@+id/tv_card_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/card_four_image"
@@ -66,7 +67,7 @@
                 android:id="@+id/tv_card_four_occupation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_card_four_name"
+                android:layout_below="@id/tv_card_name"
                 android:layout_toRightOf="@id/card_four_image"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -75,7 +76,7 @@
                 android:text="Product Developer"/>
 
             <TextView
-                android:id="@+id/tv_card_four_address"
+                android:id="@+id/tv_card_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_card_four_occupation"
@@ -90,7 +91,7 @@
                 android:id="@+id/tv_card_four_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_card_four_address"
+                android:layout_below="@id/tv_card_address"
                 android:layout_toRightOf="@id/card_four_image"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -99,7 +100,7 @@
                 android:text="1111 2222 3333 4444"/>
 
             <TextView
-                android:id="@+id/tv_card_four_email"
+                android:id="@+id/tv_card_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_card_four_no"

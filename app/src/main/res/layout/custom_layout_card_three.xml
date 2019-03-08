@@ -14,6 +14,7 @@
         android:elevation="0dp">
 
     <RelativeLayout
+        android:id="@+id/card_three"
         android:layout_width="match_parent"
         android:layout_height="250dp">
 
@@ -59,6 +60,7 @@
             android:src="@mipmap/card_3_back" />
 
         <TextView
+            android:id="@+id/tv_card_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -79,6 +81,7 @@
             android:paddingRight="10sp">
 
             <TextView
+                android:id="@+id/tv_card_address"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -88,6 +91,7 @@
                 android:textColor="#000000" />
 
             <TextView
+                android:id="@+id/tv_card_no"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.2"
@@ -97,6 +101,7 @@
                 android:textColor="#000000" />
 
             <TextView
+                android:id="@+id/tv_card_email"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.1"

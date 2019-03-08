@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:background="@mipmap/pop_up"
         android:gravity="center">
 
         <ProgressBar
@@ -24,7 +23,6 @@
             android:indeterminateTint="@color/colorPrimary"
             android:indeterminate="true"
             android:indeterminateTintMode="src_atop"
-            android:indeterminateDrawable="@mipmap/progress"
             />
 
     </LinearLayout>

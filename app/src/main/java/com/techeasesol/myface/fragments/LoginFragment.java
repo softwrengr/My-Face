@@ -79,7 +79,7 @@ public class LoginFragment extends Fragment {
 
     private void apiCallLogin() {
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword);
+        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword,"34.006418","71.502972");
         userLogin.enqueue(new Callback<LoginResponseModel>() {
             @Override
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {

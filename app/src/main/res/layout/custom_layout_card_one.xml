@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/gray"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:card_view="http://schemas.android.com/tools">
 
     <android.support.v7.widget.CardView
@@ -16,7 +16,7 @@
 
 
         <RelativeLayout
-            android:id="@+id/layout_one"
+            android:id="@+id/card_one"
             android:layout_width="wrap_content"
             android:layout_height="250sp"
             android:layout_margin="5sp"
@@ -31,6 +31,7 @@
                 android:layout_marginBottom="10sp">
 
                 <ImageView
+                    android:id="@+id/iv_card"
                     android:layout_width="match_parent"
                     android:layout_height="100sp"
                     android:src="@mipmap/image"/>
@@ -85,7 +86,7 @@
 
 
             <TextView
-                android:id="@+id/tv_name"
+                android:id="@+id/tv_card_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/profile_layout"
@@ -97,10 +98,10 @@
                 android:text="Card Name"/>
 
             <TextView
-                android:id="@+id/tv_occupation"
+                android:id="@+id/tv_card_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_name"
+                android:layout_below="@id/tv_card_name"
                 android:layout_toRightOf="@id/profile_layout"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -109,10 +110,10 @@
                 android:text="Product Developer"/>
 
             <TextView
-                android:id="@+id/tv_address"
+                android:id="@+id/tv_card_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_occupation"
+                android:layout_below="@id/tv_card_post"
                 android:layout_toRightOf="@id/profile_layout"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -121,10 +122,10 @@
                 android:text="Your Address"/>
 
             <TextView
-                android:id="@+id/tv_no"
+                android:id="@+id/tv_card_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_address"
+                android:layout_below="@id/tv_card_address"
                 android:layout_toRightOf="@id/profile_layout"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -133,10 +134,10 @@
                 android:text="1111 2222 3333 4444"/>
 
             <TextView
-                android:id="@+id/tv_email"
+                android:id="@+id/tv_card_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_no"
+                android:layout_below="@id/tv_card_no"
                 android:layout_toRightOf="@id/profile_layout"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -145,10 +146,9 @@
                 android:text="softwrengr@gmail.com"/>
 
             <ImageView
-                android:id="@+id/iv_card"
                 android:layout_width="match_parent"
                 android:layout_height="100sp"
-                android:layout_below="@id/tv_email"
+                android:layout_below="@id/tv_card_email"
                 android:layout_toRightOf="@id/profile_layout"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="10sp"
@@ -162,5 +162,54 @@
 
     </android.support.v7.widget.CardView>
 
+    <LinearLayout
+        android:id="@+id/save_share_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:visibility="gone"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/layout_save_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/save" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Card"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_share_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share Card"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

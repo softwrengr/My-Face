@@ -32,6 +32,16 @@ public class GeneralUtils {
         return fragment;
     }
 
+    public static Fragment connectCardsFragmentWithoutBack(Context context,Fragment fragment){
+        ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.my_card_container,fragment).commit();
+        return fragment;
+    }
+
+    public static Fragment connectCardsFragmentWithBack(Context context,Fragment fragment){
+        ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.my_card_container,fragment).commit();
+        return fragment;
+    }
+
     public static SharedPreferences.Editor putStringValueInEditor(Context context, String key, String value) {
         sharedPreferences = getSharedPreferences(context);
         editor = sharedPreferences.edit();
@@ -66,6 +76,10 @@ public class GeneralUtils {
 
     public static String getApiToken(Context context){
         return getSharedPreferences(context).getString("api_token","");
+    }
+
+    public static int getCardID(Context context){
+        return  getSharedPreferences(context).getInt("card_id",0);
     }
 
 
