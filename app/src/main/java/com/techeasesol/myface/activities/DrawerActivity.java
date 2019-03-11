@@ -35,14 +35,7 @@ public class DrawerActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        if(GeneralUtils.getNoifyMessage(this).equals("")){
-            GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
-        }
-        else {
-            Toast.makeText(this, GeneralUtils.getNoifyMessage(this), Toast.LENGTH_SHORT).show();
-            GeneralUtils.connectDrawerFragmentWithoutBack(this, new AboutSendFragment());
-        }
-
+        GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

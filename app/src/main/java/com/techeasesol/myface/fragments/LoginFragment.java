@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -116,14 +117,16 @@ public class LoginFragment extends Fragment {
         valid = true;
         strEmail = etEmail.getText().toString().trim();
         strPassword = etPassword.getText().toString().trim();
-        deviceToken = GeneralUtils.getDeviceToken(getActivity());
+        deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
+        Log.d("token",deviceToken);
 
-        if (deviceToken == null || deviceToken.equals("")) {
-            deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
-            GeneralUtils.putStringValueInEditor(getActivity(), "deviceToken", deviceToken);
-        } else {
-            deviceToken = GeneralUtils.getDeviceToken(getActivity());
-        }
+//        if (deviceToken == null || deviceToken.equals("")) {
+//            deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
+//            Log.d("device",deviceToken);
+//            GeneralUtils.putStringValueInEditor(getActivity(), "deviceToken", deviceToken);
+//        } else {
+//            deviceToken = GeneralUtils.getDeviceToken(getActivity());
+//        }
 
 
         if (strEmail.isEmpty()) {

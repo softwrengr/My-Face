@@ -30,34 +30,26 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMsgService";
     Context context = MyFirebaseMessagingService.this;
-    public static String message = "";
-    Bundle bundle;
-
+    String message;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-
         Log.d("msg", "onMessageReceived: " + remoteMessage.getData());
 
-        try {
-            JSONObject object = new JSONObject(remoteMessage.getData());
-            String id = object.getString("userCard_id");
-            Log.d("msg", "onMessageReceived: " + id);
-            GeneralUtils.putStringValueInEditor(this,"message",id);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        String cardID = remoteMessage.getData().get("id");
+        GeneralUtils.putStringValueInEditor(this, "message", cardID);
 
 
         Intent intent = new Intent(this, DrawerActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         String channelId = "Default";
-        NotificationCompat.Builder builder = new  NotificationCompat.Builder(this, channelId)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
                 .setSmallIcon(R.mipmap.card_3_back)
                 .setContentTitle("test")
-                .setContentText(remoteMessage.getNotification().getBody()).setAutoCancel(true).setContentIntent(pendingIntent);;
+                .setContentText(remoteMessage.getNotification().getBody()).setAutoCancel(true).setContentIntent(pendingIntent);
+        ;
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(channelId, "Default channel", NotificationManager.IMPORTANCE_DEFAULT);
