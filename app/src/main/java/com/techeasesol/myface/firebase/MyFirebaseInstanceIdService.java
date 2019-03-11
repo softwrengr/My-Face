@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.techeasesol.myface.utilities.GeneralUtils;
 
 
 /**
@@ -17,12 +18,6 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
     public static String DEVICE_TOKEN;
     Context context;
 
-    /**
-     * Called if InstanceID token is updated. This may occur if the security of
-     * the previous token had been compromised. Note that this is called when the InstanceID token
-     * is initially generated so this is where you would retrieve the token.
-     */
-    // [START refresh_token]
     @Override
     public void onTokenRefresh() {
         // Get updated InstanceID token.
@@ -44,6 +39,5 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
 
     private String sendRegistrationToServer(String token) {
         return token;
-        // TODO: Implement this method to send token to your app server.
     }
 }

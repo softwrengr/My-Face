@@ -2,7 +2,6 @@ package com.techeasesol.myface.models.updateCardDataModel;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.techeasesol.myface.models.SignUpDataModels.UpdateCardDataModel;
 
 public class AddCardResponseModel {
 

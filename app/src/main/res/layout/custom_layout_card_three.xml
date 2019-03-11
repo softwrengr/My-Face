@@ -25,12 +25,20 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0sp"
                 android:layout_weight="0.9"
-                android:background="@mipmap/cart_3_retegle" />
+                android:background="@mipmap/cart_3_retegle">
+
+                <ImageView
+                    android:id="@+id/iv_card"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -59,6 +67,7 @@
             android:layout_marginRight="30sp"
             android:paddingBottom="20sp"
             android:src="@mipmap/card_3_back" />
+
 
         <TextView
             android:id="@+id/tv_card_name"

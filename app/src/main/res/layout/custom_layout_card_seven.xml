@@ -60,7 +60,7 @@
                     android:text="Product Developer"/>
 
                 <ImageView
-                    android:id="@+id/iv_card_seven"
+                    android:id="@+id/iv_card"
                     android:layout_width="100sp"
                     android:layout_height="100sp"
                     android:scaleType="fitXY"
@@ -97,7 +97,7 @@
                         android:layout_width="130sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
-                        android:layout_toRightOf="@id/iv_card_six"
+                        android:layout_toRightOf="@id/iv_card"
                         android:fontFamily="@font/poppin_light"
                         android:maxLines="1"
                         android:text="Abdullah Khan"

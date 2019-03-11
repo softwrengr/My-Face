@@ -33,14 +33,16 @@ public interface ApiInterface {
                                          @Field("email") String email,
                                          @Field("password") String password,
                                          @Field("latitude") String latitude,
-                                         @Field("longitude") String longitude);
+                                         @Field("longitude") String longitude,
+                                         @Field("deviceToken") String deviceToken);
 
     @FormUrlEncoded
     @POST("login")
     Call<LoginResponseModel> userLogin(@Field("email") String email,
                                        @Field("password") String password,
                                        @Field("latitude") String latitude,
-                                       @Field("longitude") String longitude);
+                                       @Field("longitude") String longitude,
+                                       @Field("deviceToken") String deviceToken);
 
     @GET("usersNearBy")
     Call<NearPeopleResponseModel> nearPeoples();

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.firebase.MyFirebaseInstanceIdService;
 import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
 import com.techeasesol.myface.utilities.AlertUtils;
 import com.techeasesol.myface.utilities.GeneralUtils;
@@ -78,8 +79,9 @@ public class SignUpFragment extends Fragment {
     }
 
     private void apiCallRegistration(){
+        String deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<SignupResponseModel> userLogin = services.userSignup(strName,strEmail, strPassword, strLat,strLng);
+        Call<SignupResponseModel> userLogin = services.userSignup(strName,strEmail, strPassword, strLat,strLng,deviceToken);
         userLogin.enqueue(new Callback<SignupResponseModel>() {
             @Override
             public void onResponse(Call<SignupResponseModel> call, Response<SignupResponseModel> response) {

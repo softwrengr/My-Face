@@ -87,7 +87,7 @@ public class BottomSheetClass extends BottomSheetDialogFragment {
 
     private void apiCallSendCard() {
         ApiInterface services = ApiClient.getApiClient(GeneralUtils.getApiToken(getActivity())).create(ApiInterface.class);
-        Call<SendCardResponseModel> shareCard = services.shareCard(11, 13);
+        Call<SendCardResponseModel> shareCard = services.shareCard(GeneralUtils.getShareUserID(getActivity()), GeneralUtils.getShareCardID(getActivity()));
         shareCard.enqueue(new Callback<SendCardResponseModel>() {
             @Override
             public void onResponse(Call<SendCardResponseModel> call, Response<SendCardResponseModel> response) {

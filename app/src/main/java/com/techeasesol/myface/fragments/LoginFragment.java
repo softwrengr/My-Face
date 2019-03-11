@@ -14,8 +14,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.activities.DrawerActivity;
+import com.techeasesol.myface.firebase.MyFirebaseInstanceIdService;
+import com.techeasesol.myface.firebase.MyJobService;
 import com.techeasesol.myface.models.loginDataModels.LoginResponseModel;
 import com.techeasesol.myface.utilities.AlertUtils;
 import com.techeasesol.myface.utilities.GeneralUtils;
@@ -42,7 +45,7 @@ public class LoginFragment extends Fragment {
     @BindView(R.id.tv_sign_up)
     TextView tvSignUp;
 
-    String strEmail, strPassword, strToken;
+    String strEmail, strPassword, strToken, deviceToken;
     boolean valid = false;
 
     @Override
@@ -78,8 +81,9 @@ public class LoginFragment extends Fragment {
     }
 
     private void apiCallLogin() {
+
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword,"34.006418","71.502972");
+        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, "34.006418", "71.502972", deviceToken);
         userLogin.enqueue(new Callback<LoginResponseModel>() {
             @Override
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
@@ -112,6 +116,14 @@ public class LoginFragment extends Fragment {
         valid = true;
         strEmail = etEmail.getText().toString().trim();
         strPassword = etPassword.getText().toString().trim();
+        deviceToken = GeneralUtils.getDeviceToken(getActivity());
+
+        if (deviceToken == null || deviceToken.equals("")) {
+            deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
+            GeneralUtils.putStringValueInEditor(getActivity(), "deviceToken", deviceToken);
+        } else {
+            deviceToken = GeneralUtils.getDeviceToken(getActivity());
+        }
 
 
         if (strEmail.isEmpty()) {

@@ -26,7 +26,7 @@
                 android:layout_marginRight="20sp">
 
                 <ImageView
-                    android:id="@+id/iv_card_ten"
+                    android:id="@+id/iv_card"
                     android:layout_width="100sp"
                     android:layout_height="100sp"
                     android:src="@mipmap/image" />
@@ -36,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
-                    android:layout_toRightOf="@id/iv_card_ten"
+                    android:layout_toRightOf="@id/iv_card"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
                     android:text="KASHIF TAJ"
@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_card_name"
-                    android:layout_toRightOf="@id/iv_card_ten"
+                    android:layout_toRightOf="@id/iv_card"
                     android:fontFamily="@font/poppin_light"
                     android:gravity="center"
                     android:text="Business Developer"
@@ -61,6 +61,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@mipmap/layout_10"
                 android:layout_below="@id/layout_profile">
 
                 <ImageView
@@ -92,6 +93,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5sp"
+                                android:layout_marginLeft="20sp"
                                 android:orientation="horizontal">
 
                                 <ImageView
@@ -118,6 +120,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/address_layout"
                                 android:layout_marginTop="5sp"
+                                android:layout_marginLeft="20sp"
                                 android:orientation="horizontal">
 
                                 <ImageView
@@ -143,6 +146,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5sp"
+                                android:layout_marginLeft="20sp"
                                 android:layout_below="@id/address_email"
                                 android:orientation="horizontal">
 
@@ -173,7 +177,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10sp"
-                                android:layout_marginLeft="10sp"
+                                android:layout_marginLeft="20sp"
                                 android:layout_below="@+id/address_location"
                                 android:orientation="horizontal">
 

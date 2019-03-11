@@ -16,6 +16,9 @@ public class SignupDetailModel {
     @SerializedName("longitude")
     @Expose
     private String longitude;
+    @SerializedName("deviceToken")
+    @Expose
+    private String deviceToken;
     @SerializedName("updated_at")
     @Expose
     private String updatedAt;
@@ -59,6 +62,14 @@ public class SignupDetailModel {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
     }
 
     public String getUpdatedAt() {

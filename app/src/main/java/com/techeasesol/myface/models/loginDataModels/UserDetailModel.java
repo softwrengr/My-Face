@@ -19,30 +19,6 @@ public class UserDetailModel {
     @SerializedName("phoneNumber")
     @Expose
     private Object phoneNumber;
-    @SerializedName("designation")
-    @Expose
-    private Object designation;
-    @SerializedName("address")
-    @Expose
-    private Object address;
-    @SerializedName("facebook")
-    @Expose
-    private Object facebook;
-    @SerializedName("twitter")
-    @Expose
-    private Object twitter;
-    @SerializedName("youtube")
-    @Expose
-    private Object youtube;
-    @SerializedName("instagram")
-    @Expose
-    private Object instagram;
-    @SerializedName("skype")
-    @Expose
-    private Object skype;
-    @SerializedName("linkedin")
-    @Expose
-    private Object linkedin;
     @SerializedName("latitude")
     @Expose
     private String latitude;
@@ -54,7 +30,7 @@ public class UserDetailModel {
     private Object deviceType;
     @SerializedName("deviceToken")
     @Expose
-    private Object deviceToken;
+    private String deviceToken;
     @SerializedName("accountStatus")
     @Expose
     private String accountStatus;
@@ -111,70 +87,6 @@ public class UserDetailModel {
         this.phoneNumber = phoneNumber;
     }
 
-    public Object getDesignation() {
-        return designation;
-    }
-
-    public void setDesignation(Object designation) {
-        this.designation = designation;
-    }
-
-    public Object getAddress() {
-        return address;
-    }
-
-    public void setAddress(Object address) {
-        this.address = address;
-    }
-
-    public Object getFacebook() {
-        return facebook;
-    }
-
-    public void setFacebook(Object facebook) {
-        this.facebook = facebook;
-    }
-
-    public Object getTwitter() {
-        return twitter;
-    }
-
-    public void setTwitter(Object twitter) {
-        this.twitter = twitter;
-    }
-
-    public Object getYoutube() {
-        return youtube;
-    }
-
-    public void setYoutube(Object youtube) {
-        this.youtube = youtube;
-    }
-
-    public Object getInstagram() {
-        return instagram;
-    }
-
-    public void setInstagram(Object instagram) {
-        this.instagram = instagram;
-    }
-
-    public Object getSkype() {
-        return skype;
-    }
-
-    public void setSkype(Object skype) {
-        this.skype = skype;
-    }
-
-    public Object getLinkedin() {
-        return linkedin;
-    }
-
-    public void setLinkedin(Object linkedin) {
-        this.linkedin = linkedin;
-    }
-
     public String getLatitude() {
         return latitude;
     }
@@ -199,11 +111,11 @@ public class UserDetailModel {
         this.deviceType = deviceType;
     }
 
-    public Object getDeviceToken() {
+    public String getDeviceToken() {
         return deviceToken;
     }
 
-    public void setDeviceToken(Object deviceToken) {
+    public void setDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
     }
 

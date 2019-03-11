@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".fragments.RecievedCardFragment">
+
+    <ImageView
+        android:id="@+id/received"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@drawable/contact"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have received a new card"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_below="@id/received"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10sp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_delete_card"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:background="@drawable/gray_corner"/>
+
+        <Button
+            android:id="@+id/btn_accept_card"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20sp"
+            android:background="@drawable/black_corner"/>
+    </LinearLayout>
+
+</RelativeLayout>

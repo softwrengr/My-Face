@@ -10,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.firebase.messaging.FirebaseMessagingService;
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.firebase.MyFirebaseMessagingService;
 import com.techeasesol.myface.utilities.GeneralUtils;
 
 import butterknife.BindView;

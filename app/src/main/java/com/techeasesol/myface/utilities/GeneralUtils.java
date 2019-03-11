@@ -81,12 +81,20 @@ public class GeneralUtils {
     public static int getCardID(Context context){
         return  getSharedPreferences(context).getInt("card_id",0);
     }
-    public static int getCardNumber(Context context){
-        return  getSharedPreferences(context).getInt("card_no",0);
+    public static int getShareCardID(Context context){
+        return  getSharedPreferences(context).getInt("user_card_id",0);
     }
 
     public static int getShareUserID(Context context){
         return  getSharedPreferences(context).getInt("share_user_id",0);
+    }
+
+    public static String getDeviceToken(Context context){
+        return  getSharedPreferences(context).getString("deviceToken","");
+    }
+
+    public static String getNoifyMessage(Context context){
+        return  getSharedPreferences(context).getString("message","");
     }
 
 

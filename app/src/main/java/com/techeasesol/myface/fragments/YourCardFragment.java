@@ -10,11 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.bumptech.glide.Glide;
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.activities.DrawerActivity;
 import com.techeasesol.myface.fragments.mycards.AllSavedCardsFragment;
@@ -39,6 +41,7 @@ public class YourCardFragment extends Fragment {
     AlertDialog alertDialog;
     View view;
 
+    ImageView ivCard;
     TextView tvCardName, tvCardAddress, tvCardEmail, tvDesignation;
     LinearLayout layoutSaveShare, layoutShareCard, layoutSaveCard;
     private String token;
@@ -70,6 +73,7 @@ public class YourCardFragment extends Fragment {
 
         getActivity().setTitle("YOUR CARD");
         token = GeneralUtils.getApiToken(getActivity());
+        ivCard = view.findViewById(R.id.iv_card);
         layoutSaveShare = view.findViewById(R.id.save_share_layout);
         layoutSaveShare.setVisibility(View.VISIBLE);
         tvCardName = view.findViewById(R.id.tv_card_name);
@@ -112,7 +116,7 @@ public class YourCardFragment extends Fragment {
 
     private void apiCallCardDetail() {
         ApiInterface services = ApiClient.getApiClient(token).create(ApiInterface.class);
-        Call<CardResponseModel> userLogin = services.getCardDetail(GeneralUtils.getCardNumber(getActivity()));
+        Call<CardResponseModel> userLogin = services.getCardDetail(GeneralUtils.getShareCardID(getActivity()));
         userLogin.enqueue(new Callback<CardResponseModel>() {
             @Override
             public void onResponse(Call<CardResponseModel> call, Response<CardResponseModel> response) {
@@ -126,6 +130,7 @@ public class YourCardFragment extends Fragment {
                     }
 
                 } else if (response.body().getStatus()) {
+                    Glide.with(getActivity()).load(response.body().getData().getPicture()).into(ivCard);
                     tvCardName.setText(response.body().getData().getName());
                     tvCardAddress.setText(response.body().getData().getAddress());
                     tvCardEmail.setText(response.body().getData().getEmail());
@@ -143,7 +148,7 @@ public class YourCardFragment extends Fragment {
 
     private void apiCallStoreCard() {
         ApiInterface services = ApiClient.getApiClient(token).create(ApiInterface.class);
-        Call<CardResponseModel> storeCard = services.saveCard(GeneralUtils.getCardNumber(getActivity()));
+        Call<CardResponseModel> storeCard = services.saveCard(GeneralUtils.getShareCardID(getActivity()));
         storeCard.enqueue(new Callback<CardResponseModel>() {
             @Override
             public void onResponse(Call<CardResponseModel> call, Response<CardResponseModel> response) {

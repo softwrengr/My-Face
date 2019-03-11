@@ -13,9 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.classes.BottomSheetClass;
+import com.techeasesol.myface.fragments.AboutSendFragment;
 import com.techeasesol.myface.fragments.HomeFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
 import com.techeasesol.myface.fragments.SettingFragment;
@@ -33,7 +35,15 @@ public class DrawerActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
+        if(GeneralUtils.getNoifyMessage(this).equals("")){
+            GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
+        }
+        else {
+            Toast.makeText(this, GeneralUtils.getNoifyMessage(this), Toast.LENGTH_SHORT).show();
+            GeneralUtils.connectDrawerFragmentWithoutBack(this, new AboutSendFragment());
+        }
+
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -85,17 +95,17 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-          GeneralUtils.connectDrawerFragmentWithoutBack(this,new HomeFragment());
+            GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
         } else if (id == R.id.nav_cards) {
-            GeneralUtils.connectDrawerFragment(this,new CardsFragment());
+            GeneralUtils.connectDrawerFragment(this, new CardsFragment());
         } else if (id == R.id.nav_setting) {
-            GeneralUtils.connectDrawerFragment(this,new SettingFragment());
+            GeneralUtils.connectDrawerFragment(this, new SettingFragment());
 
         } else if (id == R.id.nav_rate_us) {
 
         } else if (id == R.id.nav_logout) {
             GeneralUtils.putBooleanValueInEditor(this, "isLogin", false);
-            startActivity(new Intent(DrawerActivity.this,MainActivity.class));
+            startActivity(new Intent(DrawerActivity.this, MainActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
