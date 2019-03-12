@@ -100,7 +100,9 @@ public class RecievedCardFragment extends Fragment {
 
                 } else if (response.body().getStatus()) {
                     Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new CardsFragment());
+                    Bundle bundle = new Bundle();
+                    bundle.putString("fragment","share_frament");
+                    GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new CardsFragment()).setArguments(bundle);
                 }
             }
 

@@ -57,7 +57,7 @@
         android:layout_marginLeft="25sp"
         android:layout_marginRight="25sp"
         android:layout_marginTop="20sp"
-        android:inputType="textEmailAddress"
+        android:inputType="textPassword"
         android:hint="@string/password"/>
 
 

@@ -101,6 +101,7 @@ public class DrawerActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout) {
             GeneralUtils.putBooleanValueInEditor(this, "isLogin", false);
             startActivity(new Intent(this,MainActivity.class));
+            finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

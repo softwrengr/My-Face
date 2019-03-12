@@ -25,7 +25,21 @@ public class CardsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_cards, container, false);
-        GeneralUtils.connectCardsFragmentWithBack(getActivity(),new AllSavedCardsFragment());
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String checkFragment = bundle.getString("fragment" );
+            if(checkFragment.equals("share_frament")){
+                GeneralUtils.connectCardsFragmentWithBack(getActivity(),new SharedCardsFragment());
+            }
+            else {
+                GeneralUtils.connectCardsFragmentWithBack(getActivity(),new AllSavedCardsFragment());
+            }
+        }
+        else {
+            GeneralUtils.connectCardsFragmentWithBack(getActivity(),new AllSavedCardsFragment());
+        }
+
+
         initUI();
         return view;
     }
