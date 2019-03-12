@@ -46,7 +46,7 @@ public class SignUpFragment extends Fragment {
     Button btnSignup;
 
     boolean valid = false;
-    String strName, strEmail,strPassword,strLat,strLng;
+    String strName, strEmail,strPassword,strLat,strLng,deviceToken;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,6 +58,8 @@ public class SignUpFragment extends Fragment {
 
     private void initUI(){
         ButterKnife.bind(this,view);
+        deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
+        GeneralUtils.putStringValueInEditor(getActivity(), "deviceToken", deviceToken);
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +83,7 @@ public class SignUpFragment extends Fragment {
     private void apiCallRegistration(){
         String deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<SignupResponseModel> userLogin = services.userSignup(strName,strEmail, strPassword, strLat,strLng,deviceToken);
+        Call<SignupResponseModel> userLogin = services.userSignup(strName,strEmail, strPassword, strLat,strLng,GeneralUtils.getDeviceToken(getActivity()));
         userLogin.enqueue(new Callback<SignupResponseModel>() {
             @Override
             public void onResponse(Call<SignupResponseModel> call, Response<SignupResponseModel> response) {
@@ -113,8 +115,8 @@ public class SignUpFragment extends Fragment {
         strName = etName.getText().toString();
         strEmail = etEmail.getText().toString().trim();
         strPassword = etPassword.getText().toString();
-        strLat = "123453";
-        strLng = "003445";
+        strLat = "34.006418";
+        strLng = "71.502972";
 
         if (strName.isEmpty()) {
             etName.setError("enter your full name");

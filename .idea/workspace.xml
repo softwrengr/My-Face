@@ -7,48 +7,40 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="msg" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e580aa22-48c0-4e00-b619-525de40b464e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/RecievedCardActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/cardStatusDataModels/CardStatusDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/cardStatusDataModels/CardStatusResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/cardStatusDataModels/CardStatusUpdateModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_recieved_card.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/card_9_black_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/card_9_white_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/card_9_black_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/card_9_white_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/card_9_black_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/card_9_white_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/card_9_black_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/card_9_white_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/AcceptedCardAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/AcceptdCardResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/AcceptedCardStatusModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/UserCardsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/ShareUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/SavedCardsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/SavedCardsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseInstanceIdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseInstanceIdService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseMessagingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/RecievedCardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/RecievedCardFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/SharedCardsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/SharedCardsFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/networking/ApiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/techeasesol/networking/ApiInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_four.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_four.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_one.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_one.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_seven.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_seven.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_ten.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_ten.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_three.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_three.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_shared_cards.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_shared_cards.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,25 +104,25 @@
     <session id="-261800973">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="11" />
+          <entry key="project.open.time.1" value="12" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
           <entry key="gradle" value="5" />
-          <entry key="java" value="377" />
+          <entry key="java" value="468" />
           <entry key="json" value="1" />
           <entry key="png" value="11" />
-          <entry key="xml" value="271" />
+          <entry key="xml" value="288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -138,73 +130,32 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="5" />
           <entry key="Image" value="11" />
-          <entry key="JAVA" value="377" />
+          <entry key="JAVA" value="468" />
           <entry key="JSON" value="1" />
-          <entry key="XML" value="271" />
+          <entry key="XML" value="288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="21" />
+          <entry key="dummy" value="45" />
           <entry key="gradle" value="38" />
-          <entry key="java" value="10668" />
-          <entry key="txt" value="262" />
-          <entry key="xml" value="7157" />
+          <entry key="java" value="11697" />
+          <entry key="txt" value="296" />
+          <entry key="xml" value="7225" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="38" />
-          <entry key="JAVA" value="10668" />
-          <entry key="PLAIN_TEXT" value="283" />
-          <entry key="XML" value="7157" />
+          <entry key="JAVA" value="11697" />
+          <entry key="PLAIN_TEXT" value="341" />
+          <entry key="XML" value="7225" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/RecievedCardActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/RecievedCardFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseMessagingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#MyFirebaseMessagingService#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="48" column="68" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -229,61 +180,62 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_all_cards.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/saveCardDataModel/SaveCardResponseModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/saveCardDataModel/SaveCardDataModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/AllSavedCardsFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/saveSingleCardModels/SaveYourCardDataModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/saveSingleCardModels/SaveYourCardModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/shareCardDataModels/RecieverUserModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/shareCardDataModels/SharedCardModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/shareCardDataModels/ShareDataModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/shareCardDataModels/ShareResponseModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/sendCardDataModel/SendCardDataModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/sendCardDataModel/SendCardResponseModel.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyJobService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/SignUpDataModels/SignupResponseModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/SignUpDataModels/SignupDetailModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/loginDataModels/UserDetailModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_six.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/AboutSendFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/UpdateInfoFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/YourCardFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseInstanceIdService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recieved_card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/SavedCardsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_one.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_three.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_four.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_seven.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_ten.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/cardStatusDataModels/CardStatusResponseModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/cardStatusDataModels/CardStatusUpdateModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/cardStatusDataModels/CardStatusDataModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/networking/ApiInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/NearPeoplesFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recieved_card.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/acceptdCardDataModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/acceptdCardResponseModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/AcceptdCardResponseModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/ShareCardUserModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/UserCardsModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/AcceptedCardStatusModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_shared_cards.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/networking/ApiInterface.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/SharedCardsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_four.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_seven.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_ten.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/AcceptedCardAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_six.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/RecievedCardActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/ShareUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseInstanceIdService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/RecievedCardFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="748" />
   </component>
@@ -295,6 +247,44 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="techeasesol" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="techeasesol" type="462c0819:PsiDirectoryNode" />
+              <item name="myface" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,63 +322,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techeasesol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techeasesol" type="462c0819:PsiDirectoryNode" />
-              <item name="myface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techeasesol" type="462c0819:PsiDirectoryNode" />
-              <item name="myface" type="462c0819:PsiDirectoryNode" />
-              <item name="firebase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="My-Face" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="techeasesol" type="462c0819:PsiDirectoryNode" />
-              <item name="myface" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,11 +330,11 @@
     <property name="DEBUGGABLE_PROCESS" value="com.techeasesol.myface" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java&#10;HOM&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Gen&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java&#10;HO&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Bot&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java&#10;dr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Dr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Log&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java&#10;Logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java&#10;Sp&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;About&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/AboutSendFragment.java&#10;Spl&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;Spla&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;Dra&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;HOm&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Up&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/UpdateInfoFragment.java&#10;Ho&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Upd&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/UpdateInfoFragment.java&#10;cus&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;HOMe&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_home.xml&#10;YOU&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/YourCardFragment.java&#10;U&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/YourCardFragment.java&#10;home&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_home.xml&#10;ho&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;HOme&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;DR&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Nea&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/NearPeoplesFragment.java&#10;Ad&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java&#10;AD&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java&#10;Bott&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java&#10;NEa&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/NearPeoplesFragment.java&#10;Alert&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/AlertUtils.java&#10;D&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Ge&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java&#10;upda&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_update_info.xml&#10;login&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_login.xml&#10;signu&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_sign_up.xml&#10;custom_ne&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_near_peoples.xml&#10;Ale&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/AlertUtils.java&#10;al&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/AlertUtils.java&#10;DRa&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;cust&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_seven.xml&#10;six&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;custom_layout&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;cu&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;car&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_one.xml&#10;hom&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_home.xml&#10;h&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_home.xml&#10;col&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/values/colors.xml&#10;str&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/values/strings.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Log&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java&#10;H&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Gen&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java&#10;Re&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/RecievedCardActivity.java&#10;Main&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java&#10;Dr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Logi&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java&#10;Spla&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;My&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseMessagingService.java&#10;Si&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java&#10;HOm&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Spl&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;S&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;HOM&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;HO&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Bot&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java&#10;dr&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Sp&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java&#10;About&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/AboutSendFragment.java&#10;Dra&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Up&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/UpdateInfoFragment.java&#10;Ho&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;Upd&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/UpdateInfoFragment.java&#10;cus&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;HOMe&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_home.xml&#10;YOU&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/YourCardFragment.java&#10;U&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/YourCardFragment.java&#10;home&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_home.xml&#10;ho&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;HOme&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java&#10;DR&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Nea&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/NearPeoplesFragment.java&#10;Ad&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java&#10;AD&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java&#10;Bott&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/classes/BottomSheetClass.java&#10;NEa&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/fragments/NearPeoplesFragment.java&#10;Alert&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/AlertUtils.java&#10;D&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;Ge&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java&#10;upda&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_update_info.xml&#10;login&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_login.xml&#10;signu&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/fragment_sign_up.xml&#10;custom_ne&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_near_peoples.xml&#10;Ale&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/AlertUtils.java&#10;al&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/utilities/AlertUtils.java&#10;DRa&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java&#10;cust&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_seven.xml&#10;six&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;custom_layout&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml&#10;cu&#9;FILE&#9;file:///Users/eapple/Documents/GitHub/My-Face/app/src/main/res/layout/custom_layout_card_six.xml" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="26EBB18415153131" />
+    <property name="device.picker.selection" value="K7UGUWFUSGSG5LJ7" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
@@ -641,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552329250645</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="accept and reject api integrated">
+      <created>1552375493030</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552375493031</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -654,11 +595,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="748" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
+      <window_info id="Captures" order="0" sideWeight="0.5007032" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49929675" visible="true" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49918568" weight="0.32911393" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49918568" weight="0.47960618" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32967034" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32967034" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32967034" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5008143" side_tool="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32911393" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32967034" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32980457" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.32084692" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -681,7 +647,7 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Preview" order="4" weight="0.32084692" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -695,7 +661,8 @@
     <MESSAGE value="sharing api implemented" />
     <MESSAGE value="notification done" />
     <MESSAGE value="ID get from fcm notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="ID get from fcm notification" />
+    <MESSAGE value="accept and reject api integrated" />
+    <option name="LAST_COMMIT_MESSAGE" value="accept and reject api integrated" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -755,66 +722,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-          <folding>
-            <element signature="e#2187#2205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/updateCardDataModel/UpdateCardDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/SignUpDataModels/SignupResponseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/loginDataModels/UserDetailModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/loginDataModels/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/SignUpDataModels/SignupDetailModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/card_3_back.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/card_10_back.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/layout_10.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -828,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseInstanceIdService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/AboutSendFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -845,13 +745,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about_send.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="59" lean-forward="true" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_connect.xml">
       <provider editor-type-id="android-designer2" />
@@ -872,73 +765,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/AllSavedCardsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_one.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_four.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_ten.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/SavedCardsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_six.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="188" column="65" lean-forward="true" selection-start-line="188" selection-start-column="65" selection-end-line="188" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_three.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_seven.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -954,25 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,21 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1002,35 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1531#1532#0" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#1783#1784#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,20 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="977">
           <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -1078,20 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/networking/ApiInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/NearPeoplesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -1106,20 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="40" column="97" selection-start-line="40" selection-start-column="97" selection-end-line="40" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recieved_card.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1128,24 +854,334 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="48" column="68" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="68" />
+        <state relative-caret-position="270">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1126#1127#0" expanded="true" />
+            <element signature="e#1163#1164#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1423#1424#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1685#1686#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1854#1855#0" expanded="true" />
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
+            <element signature="e#1973#1974#0" expanded="true" />
+            <element signature="e#2009#2010#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2299#2300#0" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="e#2371#2372#0" expanded="true" />
+            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2471#2472#0" expanded="true" />
+            <element signature="e#2511#2512#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#2605#2606#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#2691#2692#0" expanded="true" />
+            <element signature="e#2723#2724#0" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+            <element signature="e#2851#2852#0" expanded="true" />
+            <element signature="e#2883#2884#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+            <element signature="e#2975#2976#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3061#3062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/CardsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_shared_cards.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/AllSavedCardsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/networking/ApiInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/AcceptedCardStatusModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/AcceptdCardResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/models/acceptedCardsDataModel/UserCardsModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#1969#1970#0" expanded="true" />
+            <element signature="e#2000#2001#0" expanded="true" />
+            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#2067#2068#0" expanded="true" />
+            <element signature="e#2099#2100#0" expanded="true" />
+            <element signature="e#2131#2132#0" expanded="true" />
+            <element signature="e#2159#2160#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2235#2236#0" expanded="true" />
+            <element signature="e#2267#2268#0" expanded="true" />
+            <element signature="e#2295#2296#0" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="e#2371#2372#0" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#2519#2520#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2591#2592#0" expanded="true" />
+            <element signature="e#2645#2646#0" expanded="true" />
+            <element signature="e#2691#2692#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2763#2764#0" expanded="true" />
+            <element signature="e#2817#2818#0" expanded="true" />
+            <element signature="e#2863#2864#0" expanded="true" />
+            <element signature="e#2897#2898#0" expanded="true" />
+            <element signature="e#2927#2928#0" expanded="true" />
+            <element signature="e#2973#2974#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3046#3047#0" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3125#3126#0" expanded="true" />
+            <element signature="e#3165#3166#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3229#3230#0" expanded="true" />
+            <element signature="e#3275#3276#0" expanded="true" />
+            <element signature="e#3313#3314#0" expanded="true" />
+            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="e#3377#3378#0" expanded="true" />
+            <element signature="e#3423#3424#0" expanded="true" />
+            <element signature="e#3461#3462#0" expanded="true" />
+            <element signature="e#3497#3498#0" expanded="true" />
+            <element signature="e#3529#3530#0" expanded="true" />
+            <element signature="e#3579#3580#0" expanded="true" />
+            <element signature="e#3621#3622#0" expanded="true" />
+            <element signature="e#3653#3654#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
+            <element signature="e#3723#3724#0" expanded="true" />
+            <element signature="e#3757#3758#0" expanded="true" />
+            <element signature="e#3792#3793#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3871#3872#0" expanded="true" />
+            <element signature="e#3911#3912#0" expanded="true" />
+            <element signature="e#3947#3948#0" expanded="true" />
+            <element signature="e#3979#3980#0" expanded="true" />
+            <element signature="e#4029#4030#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4107#4108#0" expanded="true" />
+            <element signature="e#4139#4140#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#4231#4232#0" expanded="true" />
+            <element signature="e#4260#4261#0" expanded="true" />
+            <element signature="e#4287#4288#0" expanded="true" />
+            <element signature="e#4325#4326#0" expanded="true" />
+            <element signature="e#4357#4358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_one.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="125" column="43" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_four.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="107" column="52" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_seven.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="105" column="22" lean-forward="true" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_ten.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="132" column="63" selection-start-line="132" selection-start-column="63" selection-end-line="132" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_six.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="135" column="55" selection-start-line="135" selection-start-column="55" selection-end-line="135" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_layout_card_nine.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/AcceptedCardAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/mycards/SharedCardsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/SignUpFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseInstanceIdService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/ShareUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/DrawerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/utilities/GeneralUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/RecievedCardActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+        <state relative-caret-position="105">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/firebase/MyFirebaseMessagingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
+        <state relative-caret-position="277">
+          <caret line="42" column="104" selection-start-line="42" selection-start-column="104" selection-end-line="42" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#MyFirebaseMessagingService#0" />
@@ -1153,17 +1189,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/activities/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/NearPeopleAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="78" lean-forward="true" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+        <state relative-caret-position="-427">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/adapters/SavedCardsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="96" column="67" lean-forward="true" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/RecievedCardFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+        <state relative-caret-position="404">
+          <caret line="77" column="85" selection-start-line="77" selection-start-column="85" selection-end-line="77" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="59" column="114" selection-start-line="59" selection-start-column="114" selection-end-line="59" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/techeasesol/myface/fragments/LoginFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
         </state>
       </provider>
     </entry>

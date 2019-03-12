@@ -94,7 +94,7 @@
                         android:src="@mipmap/card_six_phone" />
 
                     <TextView
-                        android:id="@+id/tv_card_seven_phone"
+                        android:id="@+id/tv_card_no"
                         android:layout_width="130sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"

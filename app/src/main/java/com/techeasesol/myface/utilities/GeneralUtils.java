@@ -97,5 +97,9 @@ public class GeneralUtils {
         return  getSharedPreferences(context).getString("send_card_id","1");
     }
 
+    public static String getCardMessage(Context context){
+        return  getSharedPreferences(context).getString("card_message","");
+    }
+
 
 }

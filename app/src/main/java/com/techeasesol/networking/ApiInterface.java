@@ -2,6 +2,8 @@ package com.techeasesol.networking;
 
 
 import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
+import com.techeasesol.myface.models.acceptedCardsDataModel.AcceptdCardResponseModel;
+import com.techeasesol.myface.models.acceptedCardsDataModel.AcceptedCardStatusModel;
 import com.techeasesol.myface.models.cardStatusDataModels.CardStatusResponseModel;
 import com.techeasesol.myface.models.saveCardDataModel.SaveCardResponseModel;
 import com.techeasesol.myface.models.sendCardDataModel.SendCardResponseModel;
@@ -79,6 +81,9 @@ public interface ApiInterface {
 
     @GET("getSavedCards")
     Call<SaveCardResponseModel> savedCards();
+
+    @GET("getSharedCards")
+    Call<AcceptdCardResponseModel> acceptedCards();
 
     @FormUrlEncoded
     @POST("updateShareCardStatus")

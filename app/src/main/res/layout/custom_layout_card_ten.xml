@@ -130,7 +130,7 @@
                                     android:src="@mipmap/card_10_address" />
 
                                 <TextView
-                                    android:id="@+id/tv_no"
+                                    android:id="@+id/tv_card_no"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10sp"

@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.techeasesol.myface.utilities.GeneralUtils;
+import com.techeasesol.myface.utilities.ShareUtils;
 
 
 /**
@@ -27,11 +28,10 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
         Log.d(TAG, "Refreshed token: " + refreshedToken);
         if (refreshedToken.equals(null)) {
             // onTokenRefresh();
-            Toast.makeText(this, "F, ID Null", Toast.LENGTH_SHORT).show();
             refreshedToken = FirebaseInstanceId.getInstance().getToken();
 
         } else {
-//            GeneralUtils.putStringValueInEditor(context, "device_token", refreshedToken).commit();
+            ShareUtils.getEditor(this).putString("device_token", refreshedToken).commit();
         }
 
         sendRegistrationToServer(refreshedToken);

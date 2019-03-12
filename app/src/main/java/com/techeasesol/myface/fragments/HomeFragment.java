@@ -1,10 +1,15 @@
 package com.techeasesol.myface.fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +20,8 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.firebase.MyFirebaseMessagingService;
 import com.techeasesol.myface.utilities.GeneralUtils;
+
+import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,33 +42,35 @@ public class HomeFragment extends Fragment {
     RelativeLayout cardNine;
     @BindView(R.id.card_ten)
     RelativeLayout cardTen;
+
+    int cardID;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home, container, false);
         initUI();
+        onback(view);
         return view;
     }
 
     private void initUI(){
         ButterKnife.bind(this,view);
-//        String cardID = GeneralUtils.getSendCardID(getActivity());
-//
-//        Toast.makeText(getActivity(), cardID, Toast.LENGTH_SHORT).show();
-//
-//        if(cardID==null || cardID.equals("")){
-//            Log.d("message","No notification here");
-//        }
-//        else {
-//            GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
-//        }
+
+        if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("your Card has been accepted")){
+            showMessage(GeneralUtils.getCardMessage(getActivity()));
+        }
+
+        if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("You have new card from")){
+            GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
+        }
+
 
         cardOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",1);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
 
@@ -69,7 +78,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",3);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
 
@@ -77,7 +86,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",4);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
 
@@ -85,7 +94,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",6);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
 
@@ -93,7 +102,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",7);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
 
@@ -101,7 +110,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",9);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
 
@@ -109,8 +118,39 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",10);
-                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });
+    }
+
+    private void onback(View view) {
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                    getActivity().finish();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+    }
+
+    private void showMessage(String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("My Face");
+        builder.setMessage(message);
+        builder.setCancelable(false);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
+            }
+        });
+        builder.show();
     }
 }

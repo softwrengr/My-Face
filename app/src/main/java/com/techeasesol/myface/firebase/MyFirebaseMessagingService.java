@@ -39,10 +39,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d("msg", "onMessageReceived: " + remoteMessage.getData());
 
         String cardID = remoteMessage.getData().get("id");
-        GeneralUtils.putStringValueInEditor(this, "send_card_id", cardID);
+        GeneralUtils.putStringValueInEditor(this, "send_card_id", cardID).commit();
+        GeneralUtils.putStringValueInEditor(this,"card_message",remoteMessage.getData().get("message"));
 
 
-        Intent intent = new Intent(this, RecievedCardActivity.class);
+        Intent intent = new Intent(this, DrawerActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         String channelId = "Default";

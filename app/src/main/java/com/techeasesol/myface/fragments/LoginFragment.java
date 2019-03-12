@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +20,13 @@ import android.widget.Toast;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.techeasesol.myface.R;
 import com.techeasesol.myface.activities.DrawerActivity;
+import com.techeasesol.myface.activities.MainActivity;
 import com.techeasesol.myface.firebase.MyFirebaseInstanceIdService;
 import com.techeasesol.myface.firebase.MyJobService;
 import com.techeasesol.myface.models.loginDataModels.LoginResponseModel;
 import com.techeasesol.myface.utilities.AlertUtils;
 import com.techeasesol.myface.utilities.GeneralUtils;
+import com.techeasesol.myface.utilities.ShareUtils;
 import com.techeasesol.networking.ApiClient;
 import com.techeasesol.networking.ApiInterface;
 
@@ -84,7 +88,7 @@ public class LoginFragment extends Fragment {
     private void apiCallLogin() {
 
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, "34.006418", "71.502972", deviceToken);
+        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, "34.006418", "71.502972", ShareUtils.getDeviceToken(getActivity()));
         userLogin.enqueue(new Callback<LoginResponseModel>() {
             @Override
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
@@ -117,16 +121,6 @@ public class LoginFragment extends Fragment {
         valid = true;
         strEmail = etEmail.getText().toString().trim();
         strPassword = etPassword.getText().toString().trim();
-        deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
-        Log.d("token",deviceToken);
-
-//        if (deviceToken == null || deviceToken.equals("")) {
-//            deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
-//            Log.d("device",deviceToken);
-//            GeneralUtils.putStringValueInEditor(getActivity(), "deviceToken", deviceToken);
-//        } else {
-//            deviceToken = GeneralUtils.getDeviceToken(getActivity());
-//        }
 
 
         if (strEmail.isEmpty()) {
@@ -145,6 +139,5 @@ public class LoginFragment extends Fragment {
         }
         return valid;
     }
-
 
 }

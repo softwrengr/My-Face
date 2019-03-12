@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,19 +49,23 @@ public class RecievedCardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_recieved_card, container, false);
-        ((RecievedCardActivity)getActivity()).getSupportActionBar().hide();
-
         initUI();
         return view;
     }
 
     private void initUI() {
         ButterKnife.bind(this, view);
-        cardID = Integer.parseInt(GeneralUtils.getSendCardID(getActivity()));
+
+        if (GeneralUtils.getSendCardID(getActivity()) == null) {
+            Log.d("error", "card id is null");
+        } else {
+            cardID = Integer.parseInt(GeneralUtils.getSendCardID(getActivity()));
+        }
 
         btnAcceptCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
                 alertDialog = AlertUtils.createProgressDialog(getActivity());
                 alertDialog.show();
                 apiCallAcceptRejectCard(cardID, 1);
@@ -70,6 +75,7 @@ public class RecievedCardFragment extends Fragment {
         btnDeleteCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
                 alertDialog = AlertUtils.createProgressDialog(getActivity());
                 alertDialog.show();
                 apiCallAcceptRejectCard(cardID, 0);
@@ -94,8 +100,7 @@ public class RecievedCardFragment extends Fragment {
 
                 } else if (response.body().getStatus()) {
                     Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    GeneralUtils.putStringValueInEditor(getActivity(), "send_card_id", "");
-                    startActivity(new Intent(getActivity(), DrawerActivity.class));
+                    GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new CardsFragment());
                 }
             }
 

@@ -19,6 +19,7 @@ import com.techeasesol.myface.R;
 import com.techeasesol.myface.classes.BottomSheetClass;
 import com.techeasesol.myface.fragments.AboutSendFragment;
 import com.techeasesol.myface.fragments.HomeFragment;
+import com.techeasesol.myface.fragments.LoginFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
 import com.techeasesol.myface.fragments.RecievedCardFragment;
 import com.techeasesol.myface.fragments.SettingFragment;
@@ -99,7 +100,7 @@ public class DrawerActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
             GeneralUtils.putBooleanValueInEditor(this, "isLogin", false);
-            startActivity(new Intent(DrawerActivity.this, MainActivity.class));
+            startActivity(new Intent(this,MainActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
