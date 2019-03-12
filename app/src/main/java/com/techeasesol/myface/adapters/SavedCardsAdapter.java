@@ -88,12 +88,14 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
         final SaveCardDataModel model = saveCardDataModelList.get(position);
 
-        myViewHolder.tvName.setText(model.getName());
         if (model.getPicture() == null) {
             myViewHolder.ivCard.setImageDrawable(context.getResources().getDrawable(R.mipmap.image));
         } else {
             Glide.with(context).load(model.getPicture()).into(myViewHolder.ivCard);
         }
+        myViewHolder.tvName.setText(model.getName());
+        myViewHolder.tvDesignation.setText(model.getDesignation());
+        myViewHolder.tvEmail.setText(model.getEmail());
     }
 
     @Override
@@ -103,13 +105,15 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivCard;
-        TextView tvName;
+        TextView tvName, tvDesignation, tvEmail;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvName = itemView.findViewById(R.id.tv_card_name);
             ivCard = itemView.findViewById(R.id.iv_card);
+            tvDesignation = itemView.findViewById(R.id.tv_card_post);
+            tvEmail = itemView.findViewById(R.id.tv_card_email);
         }
     }
 }

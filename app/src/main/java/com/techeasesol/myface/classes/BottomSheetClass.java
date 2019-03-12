@@ -58,8 +58,8 @@ public class BottomSheetClass extends BottomSheetDialogFragment {
                 BottomSheetBehavior.from((View) coordinatorLayout.getParent()).setPeekHeight(bottomSheetInternal.getHeight());
                 bottomSheetBehavior.setPeekHeight(bottomSheetInternal.getHeight());
                 coordinatorLayout.getParent().requestLayout();
-                bottomSheetBehavior.setHideable(false);
-                d.setCancelable(false);
+                bottomSheetBehavior.setHideable(true);
+                d.setCancelable(true);
 
 
             }

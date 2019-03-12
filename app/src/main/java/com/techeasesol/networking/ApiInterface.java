@@ -2,6 +2,7 @@ package com.techeasesol.networking;
 
 
 import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
+import com.techeasesol.myface.models.cardStatusDataModels.CardStatusResponseModel;
 import com.techeasesol.myface.models.saveCardDataModel.SaveCardResponseModel;
 import com.techeasesol.myface.models.sendCardDataModel.SendCardResponseModel;
 import com.techeasesol.myface.models.shareCardDataModels.ShareResponseModel;
@@ -55,7 +56,7 @@ public interface ApiInterface {
     Call<CardResponseModel> saveCard(@Field("id") int id);
 
     @FormUrlEncoded
-    @POST("shareCard")
+    @POST("sharedCard")
     Call<SendCardResponseModel> shareCard(@Field("shareWithUserId") int userID,
                                           @Field("userCardId") int userCardID);
 
@@ -78,6 +79,11 @@ public interface ApiInterface {
 
     @GET("getSavedCards")
     Call<SaveCardResponseModel> savedCards();
+
+    @FormUrlEncoded
+    @POST("updateShareCardStatus")
+    Call<CardStatusResponseModel> acceptDeleteCard(@Field("id") int ID,
+                                                   @Field("status") int status);
 
 
 

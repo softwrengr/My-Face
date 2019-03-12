@@ -32,13 +32,13 @@ public class GeneralUtils {
         return fragment;
     }
 
-    public static Fragment connectCardsFragmentWithoutBack(Context context,Fragment fragment){
+    public static Fragment connectCardsFragmentWithBack(Context context,Fragment fragment){
         ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.my_card_container,fragment).commit();
         return fragment;
     }
 
-    public static Fragment connectCardsFragmentWithBack(Context context,Fragment fragment){
-        ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.my_card_container,fragment).commit();
+    public static Fragment connectRecievedCardFragments(Context context,Fragment fragment){
+        ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
         return fragment;
     }
 
@@ -93,8 +93,8 @@ public class GeneralUtils {
         return  getSharedPreferences(context).getString("deviceToken","");
     }
 
-    public static String getNoifyMessage(Context context){
-        return  getSharedPreferences(context).getString("message","");
+    public static String getSendCardID(Context context){
+        return  getSharedPreferences(context).getString("send_card_id","1");
     }
 
 

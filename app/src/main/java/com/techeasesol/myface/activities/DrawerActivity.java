@@ -20,6 +20,7 @@ import com.techeasesol.myface.classes.BottomSheetClass;
 import com.techeasesol.myface.fragments.AboutSendFragment;
 import com.techeasesol.myface.fragments.HomeFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
+import com.techeasesol.myface.fragments.RecievedCardFragment;
 import com.techeasesol.myface.fragments.SettingFragment;
 import com.techeasesol.myface.fragments.mycards.CardsFragment;
 import com.techeasesol.myface.utilities.GeneralUtils;

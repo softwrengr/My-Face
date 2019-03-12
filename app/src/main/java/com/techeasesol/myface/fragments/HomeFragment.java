@@ -31,6 +31,8 @@ public class HomeFragment extends Fragment {
     RelativeLayout cardSix;
     @BindView(R.id.card_seven)
     RelativeLayout cardSeven;
+    @BindView(R.id.card_nine)
+    RelativeLayout cardNine;
     @BindView(R.id.card_ten)
     RelativeLayout cardTen;
     @Override
@@ -44,6 +46,16 @@ public class HomeFragment extends Fragment {
 
     private void initUI(){
         ButterKnife.bind(this,view);
+//        String cardID = GeneralUtils.getSendCardID(getActivity());
+//
+//        Toast.makeText(getActivity(), cardID, Toast.LENGTH_SHORT).show();
+//
+//        if(cardID==null || cardID.equals("")){
+//            Log.d("message","No notification here");
+//        }
+//        else {
+//            GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
+//        }
 
         cardOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +93,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",7);
+                GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardNine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",9);
                 GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new UpdateInfoFragment());
             }
         });

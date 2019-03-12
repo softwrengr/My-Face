@@ -11,6 +11,7 @@
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
         android:elevation="0dp"
+        android:layout_marginTop="5sp"
         app:cardCornerRadius="5sp">
 
         <RelativeLayout
