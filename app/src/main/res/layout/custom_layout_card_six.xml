@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
+        android:layout_marginTop="8sp"
         android:elevation="0dp"
         app:cardCornerRadius="5sp">
 
@@ -78,8 +79,9 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_card"
-                        android:layout_width="70sp"
-                        android:layout_height="70sp"
+                        android:layout_width="65sp"
+                        android:layout_height="65sp"
+                        android:layout_marginLeft="2sp"
                         android:layout_centerVertical="true"
                         android:src="@mipmap/image" />
 
@@ -90,6 +92,7 @@
                         android:layout_alignBaseline="@id/iv_card"
                         android:layout_marginTop="20sp"
                         android:layout_toRightOf="@id/iv_card"
+                        android:layout_marginLeft="2sp"
                         android:fontFamily="@font/poppins_medium"
                         android:maxLines="1"
                         android:text="Abdullah Khan"
@@ -105,6 +108,7 @@
                         android:layout_toRightOf="@id/iv_card"
                         android:fontFamily="@font/poppin_light"
                         android:maxLines="1"
+                        android:layout_marginLeft="2sp"
                         android:text="Abdullah Khan"
                         android:textColor="@color/white"
                         android:textSize="14sp" />

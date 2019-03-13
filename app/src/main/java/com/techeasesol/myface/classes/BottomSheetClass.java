@@ -105,6 +105,9 @@ public class BottomSheetClass extends BottomSheetDialogFragment {
                     GeneralUtils.connectDrawerFragment(getActivity(), new AboutSendFragment());
                     getDialog().dismiss();
                 }
+                else if(!response.body().getStatus()){
+                    Toast.makeText(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override

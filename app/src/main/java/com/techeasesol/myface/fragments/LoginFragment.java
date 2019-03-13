@@ -49,6 +49,8 @@ public class LoginFragment extends Fragment {
     Button btnLogin;
     @BindView(R.id.tv_sign_up)
     TextView tvSignUp;
+    @BindView(R.id.forgot_password)
+    TextView tvForgotPassword;
 
     String strEmail, strPassword, strToken, deviceToken;
     boolean valid = false;
@@ -80,6 +82,13 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.connectFragment(getActivity(), new SignUpFragment());
+            }
+        });
+
+        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.connectFragment(getActivity(), new ForgotPasswordFragment());
             }
         });
 

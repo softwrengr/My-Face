@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.techeasesol.myface.R;
@@ -48,6 +49,10 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
             case 1:
                 view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.custom_layout_card_one, parent, false);
+                return new AcceptedCardAdapter.MyViewHolder(view);
+            case 2:
+                view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.custom_layout_card_three, parent, false);
                 return new AcceptedCardAdapter.MyViewHolder(view);
             case 3:
                 view = LayoutInflater.from(parent.getContext())

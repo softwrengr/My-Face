@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.techeasesol.myface.R;
@@ -39,11 +40,14 @@ public class SharedCardsFragment extends Fragment {
     View view;
     @BindView(R.id.rv_accepted)
     RecyclerView rvAcceptedCards;
+    @BindView(R.id.share_recycler_layout)
+    RelativeLayout layoutRecycler;
+    @BindView(R.id.share_empty)
+    RelativeLayout layoutEmpty;
 
     ArrayList<AcceptedCardStatusModel> acceptedCardStatusModelList;
     ArrayList<UserCardsModel> userCardsModelList;
     AcceptedCardAdapter acceptedCardAdapter;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,15 +60,18 @@ public class SharedCardsFragment extends Fragment {
     private void initUI() {
         ButterKnife.bind(this, view);
 
+        Log.d("token",GeneralUtils.getApiToken(getActivity()));
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         rvAcceptedCards.setLayoutManager(linearLayoutManager);
         userCardsModelList = new ArrayList<>();
         acceptedCardStatusModelList = new ArrayList<>();
         alertDialog = AlertUtils.createProgressDialog(getActivity());
         alertDialog.show();
-        acceptedCardAdapter = new AcceptedCardAdapter(getActivity(), acceptedCardStatusModelList,userCardsModelList);
+        acceptedCardAdapter = new AcceptedCardAdapter(getActivity(), acceptedCardStatusModelList, userCardsModelList);
         rvAcceptedCards.setAdapter(acceptedCardAdapter);
         apiCallAcceptedCard();
+
     }
 
     private void apiCallAcceptedCard() {
@@ -88,6 +95,11 @@ public class SharedCardsFragment extends Fragment {
                     }
 
                     acceptedCardAdapter.notifyDataSetChanged();
+
+                    if (acceptedCardStatusModelList == null || acceptedCardStatusModelList.size() == 0) {
+                        layoutRecycler.setVisibility(View.GONE);
+                        layoutEmpty.setVisibility(View.VISIBLE);
+                    }
 
                 }
             }

@@ -5,6 +5,9 @@ import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
 import com.techeasesol.myface.models.acceptedCardsDataModel.AcceptdCardResponseModel;
 import com.techeasesol.myface.models.acceptedCardsDataModel.AcceptedCardStatusModel;
 import com.techeasesol.myface.models.cardStatusDataModels.CardStatusResponseModel;
+import com.techeasesol.myface.models.resetPasswordDataModels.ChangePasswordModel;
+import com.techeasesol.myface.models.resetPasswordDataModels.ResetPasswordModel;
+import com.techeasesol.myface.models.resetPasswordDataModels.verifycodemodel.VerifyCodeResponseModel;
 import com.techeasesol.myface.models.saveCardDataModel.SaveCardResponseModel;
 import com.techeasesol.myface.models.sendCardDataModel.SendCardResponseModel;
 import com.techeasesol.myface.models.shareCardDataModels.ShareResponseModel;
@@ -89,6 +92,20 @@ public interface ApiInterface {
     @POST("updateShareCardStatus")
     Call<CardStatusResponseModel> acceptDeleteCard(@Field("id") int ID,
                                                    @Field("status") int status);
+
+    @FormUrlEncoded
+    @POST("resetPassword")
+    Call<ResetPasswordModel> resetPassword(@Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("resetPasswordVerify")
+    Call<VerifyCodeResponseModel> verifyPasswordCode(@Field("code") String code,
+                                                     @Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("changePassword")
+    Call<ChangePasswordModel> changePassword(@Field("newPassword") String code,
+                                             @Field("confirmPassword") String email);
 
 
 

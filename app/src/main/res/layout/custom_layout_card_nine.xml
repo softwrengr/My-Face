@@ -11,7 +11,7 @@
         app:cardCornerRadius="5sp"
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
-        android:layout_marginTop="5sp"
+        android:layout_marginTop="8sp"
         android:elevation="0dp">
 
 
@@ -97,7 +97,30 @@
                     android:layout_centerHorizontal="true"
                     android:layout_below="@id/tv_card_name"
                     android:fontFamily="@font/poppin_light"
-                    android:text="Product Developer"/>
+                    android:text="111 444 555 333"/>
+
+                <TextView
+                    android:id="@+id/tv_card_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_card_name"
+                    android:fontFamily="@font/poppin_light"
+                    android:text="Your Address"/>
+                <TextView
+                    android:id="@+id/tv_card_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_card_name"
+                    android:fontFamily="@font/poppin_light"
+                    android:text="softwrengr@gmail.com"/>
             </LinearLayout>
 
             <LinearLayout

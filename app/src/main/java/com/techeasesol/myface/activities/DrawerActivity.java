@@ -1,6 +1,8 @@
 package com.techeasesol.myface.activities;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -70,12 +72,8 @@ public class DrawerActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -93,11 +91,8 @@ public class DrawerActivity extends AppCompatActivity
             GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
         } else if (id == R.id.nav_cards) {
             GeneralUtils.connectDrawerFragment(this, new CardsFragment());
-        } else if (id == R.id.nav_setting) {
-            GeneralUtils.connectDrawerFragment(this, new SettingFragment());
-
         } else if (id == R.id.nav_rate_us) {
-
+          rateUs();
         } else if (id == R.id.nav_logout) {
             GeneralUtils.putBooleanValueInEditor(this, "isLogin", false);
             startActivity(new Intent(this,MainActivity.class));
@@ -107,5 +102,19 @@ public class DrawerActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void rateUs(){
+        Uri uri = Uri.parse("market://details?id=" + this.getPackageName());
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + this.getPackageName())));
+        }
     }
 }

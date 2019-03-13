@@ -101,5 +101,9 @@ public class GeneralUtils {
         return  getSharedPreferences(context).getString("card_message","");
     }
 
+    public static String getForgotEmail(Context context){
+        return getSharedPreferences(context).getString("forgot_email","");
+    }
+
 
 }

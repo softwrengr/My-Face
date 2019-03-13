@@ -49,6 +49,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home, container, false);
+        getActivity().setTitle("Cards");
         initUI();
         onback(view);
         return view;
@@ -58,11 +59,16 @@ public class HomeFragment extends Fragment {
         ButterKnife.bind(this,view);
 
         if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("your Card has been accepted")){
-            showMessage(GeneralUtils.getCardMessage(getActivity()));
+            showMessage(GeneralUtils.getCardMessage(getActivity()),"message");
+        }
+
+        if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("your Card has been rejected")){
+            showMessage(GeneralUtils.getCardMessage(getActivity()),"message");
         }
 
         if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("You have new card from")){
-            GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
+            showMessage(GeneralUtils.getCardMessage(getActivity()),"new card");
+
         }
 
 
@@ -140,7 +146,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private void showMessage(String message){
+    private void showMessage(String message, final String card){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("My Face");
         builder.setMessage(message);
@@ -148,7 +154,13 @@ public class HomeFragment extends Fragment {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
+                if(card.equals("new card")){
+                    GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
+                }
+                else if(card.equals("message")){
+                    GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
+                }
+
             }
         });
         builder.show();

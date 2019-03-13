@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.techeasesol.myface.R;
@@ -43,9 +44,13 @@ public class AllSavedCardsFragment extends Fragment {
     View view;
     @BindView(R.id.rv_saved_cards)
     RecyclerView rvSavedCards;
-
     ArrayList<SaveCardDataModel> saveCardDataModelArrayList;
     SavedCardsAdapter savedCardsAdapter;
+
+    @BindView(R.id.recycler_layout)
+    RelativeLayout layoutRecycler;
+    @BindView(R.id.empty)
+    RelativeLayout layoutEmpty;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -66,6 +71,7 @@ public class AllSavedCardsFragment extends Fragment {
         savedCardsAdapter = new SavedCardsAdapter(getActivity(), saveCardDataModelArrayList);
         rvSavedCards.setAdapter(savedCardsAdapter);
         apiCallSavedCards();
+
     }
 
     private void apiCallSavedCards() {
@@ -85,6 +91,11 @@ public class AllSavedCardsFragment extends Fragment {
                 } else if (response.body().getStatus()) {
                     saveCardDataModelArrayList.addAll(response.body().getData());
                     savedCardsAdapter.notifyDataSetChanged();
+
+                    if(saveCardDataModelArrayList==null || saveCardDataModelArrayList.size()==0){
+                        layoutRecycler.setVisibility(View.GONE);
+                        layoutEmpty.setVisibility(View.VISIBLE);
+                    }
 
                 }
             }
