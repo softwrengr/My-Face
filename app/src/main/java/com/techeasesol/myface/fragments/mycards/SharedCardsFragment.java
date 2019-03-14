@@ -48,6 +48,7 @@ public class SharedCardsFragment extends Fragment {
     ArrayList<AcceptedCardStatusModel> acceptedCardStatusModelList;
     ArrayList<UserCardsModel> userCardsModelList;
     AcceptedCardAdapter acceptedCardAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,9 +60,6 @@ public class SharedCardsFragment extends Fragment {
 
     private void initUI() {
         ButterKnife.bind(this, view);
-
-        Log.d("token",GeneralUtils.getApiToken(getActivity()));
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         rvAcceptedCards.setLayoutManager(linearLayoutManager);
         userCardsModelList = new ArrayList<>();

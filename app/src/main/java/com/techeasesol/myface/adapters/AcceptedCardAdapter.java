@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -103,6 +104,7 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
         myViewHolder.tvName.setText(model.getName());
         myViewHolder.tvDesignation.setText(model.getDesignation());
         myViewHolder.tvEmail.setText(model.getEmail());
+
     }
 
     @Override
@@ -111,9 +113,9 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivCard;
+        ImageView ivCard,ivShare;
         TextView tvName, tvDesignation, tvEmail,tvCardNo;
-
+        RelativeLayout layoutSmallInfo;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -122,6 +124,8 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
             tvDesignation = itemView.findViewById(R.id.tv_card_post);
             tvEmail = itemView.findViewById(R.id.tv_card_email);
             tvCardNo = itemView.findViewById(R.id.tv_card_no);
+//            layoutSmallInfo = itemView.findViewById(R.id.info_layout);
+//            ivShare = itemView.findViewById(R.id.iv_small_share);
         }
     }
 }

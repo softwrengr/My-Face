@@ -105,5 +105,13 @@ public class GeneralUtils {
         return getSharedPreferences(context).getString("forgot_email","");
     }
 
+    public static String getLatitude(Context context){
+        return getSharedPreferences(context).getString("latitude","");
+    }
+
+    public static String getLongitude(Context context){
+        return getSharedPreferences(context).getString("longitude","");
+    }
+
 
 }

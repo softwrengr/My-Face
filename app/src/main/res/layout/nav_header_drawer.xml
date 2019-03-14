@@ -15,7 +15,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="120sp"
-        android:layout_height="120sp"
+        android:layout_height="100sp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:layout_centerHorizontal="true"
         app:srcCompat="@mipmap/logo1" />

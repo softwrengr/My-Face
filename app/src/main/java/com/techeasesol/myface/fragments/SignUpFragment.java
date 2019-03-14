@@ -59,8 +59,11 @@ public class SignUpFragment extends Fragment {
 
     private void initUI(){
         ButterKnife.bind(this,view);
+        strLat = GeneralUtils.getLatitude(getActivity());
+        strLng = GeneralUtils.getLongitude(getActivity());
         deviceToken = MyFirebaseInstanceIdService.DEVICE_TOKEN;
         GeneralUtils.putStringValueInEditor(getActivity(), "deviceToken", deviceToken);
+
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,13 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.fragments.NearPeoplesFragment;
 import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleDetailModel;
 import com.techeasesol.myface.models.saveCardDataModel.SaveCardDataModel;
+import com.techeasesol.myface.utilities.GeneralUtils;
 
 import java.util.List;
 
@@ -93,9 +96,20 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
         } else {
             Glide.with(context).load(model.getPicture()).into(myViewHolder.ivCard);
         }
+
+        myViewHolder.layoutSmallInfo.setVisibility(View.VISIBLE);
         myViewHolder.tvName.setText(model.getName());
         myViewHolder.tvDesignation.setText(model.getDesignation());
         myViewHolder.tvEmail.setText(model.getEmail());
+
+        myViewHolder.ivShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(context, "user_card_id", model.getId()     );
+                GeneralUtils.connectDrawerFragment(context, new NearPeoplesFragment());
+            }
+        });
+
     }
 
     @Override
@@ -104,8 +118,9 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivCard;
+        ImageView ivCard,ivShare;
         TextView tvName, tvDesignation, tvEmail;
+        RelativeLayout layoutSmallInfo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -114,6 +129,8 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
             ivCard = itemView.findViewById(R.id.iv_card);
             tvDesignation = itemView.findViewById(R.id.tv_card_post);
             tvEmail = itemView.findViewById(R.id.tv_card_email);
+            layoutSmallInfo = itemView.findViewById(R.id.info_layout);
+            ivShare = itemView.findViewById(R.id.iv_small_share);
         }
     }
 }

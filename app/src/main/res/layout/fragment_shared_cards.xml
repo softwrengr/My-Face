@@ -9,14 +9,14 @@
     <RelativeLayout
         android:id="@+id/share_recycler_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="2sp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_accepted"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="2sp"
-            android:layout_marginRight="2sp">
+            android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
 

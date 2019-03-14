@@ -1,9 +1,16 @@
 package com.techeasesol.myface.fragments;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
@@ -52,8 +59,12 @@ public class LoginFragment extends Fragment {
     @BindView(R.id.forgot_password)
     TextView tvForgotPassword;
 
-    String strEmail, strPassword, strToken, deviceToken;
+    String strEmail, strPassword, strToken, deviceToken, strLatitude, strLongitude;
     boolean valid = false;
+
+    public static double lattitude, longitude;
+    LocationManager locationManager;
+    private static final int REQUEST_LOCATION = 100;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +77,14 @@ public class LoginFragment extends Fragment {
 
     private void initUI() {
         ButterKnife.bind(this, view);
+
+        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            buildAlertMessageNoGps();
+
+        } else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            getLocation();
+        }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +116,7 @@ public class LoginFragment extends Fragment {
     private void apiCallLogin() {
 
         ApiInterface services = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, "34.006418", "71.502972", ShareUtils.getDeviceToken(getActivity()));
+        Call<LoginResponseModel> userLogin = services.userLogin(strEmail, strPassword, strLatitude, strLongitude, ShareUtils.getDeviceToken(getActivity()));
         userLogin.enqueue(new Callback<LoginResponseModel>() {
             @Override
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
@@ -147,6 +166,70 @@ public class LoginFragment extends Fragment {
             etPassword.setError(null);
         }
         return valid;
+    }
+
+    //getting current location
+    public void getLocation() {
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
+                (getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+
+        } else {
+            Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            Location location1 = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location location2 = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+
+            if (location != null) {
+                double latti = location.getLatitude();
+                double longi = location.getLongitude();
+
+                lattitude = latti;
+                longitude = longi;
+
+            } else if (location1 != null) {
+                double latti = location1.getLatitude();
+                double longi = location1.getLongitude();
+
+                lattitude = latti;
+                longitude = longi;
+
+            } else if (location2 != null) {
+                double latti = location2.getLatitude();
+                double longi = location2.getLongitude();
+                lattitude = latti;
+                longitude = longi;
+
+            } else {
+                Toast.makeText(getActivity(), "Unble to Trace your location", Toast.LENGTH_SHORT).show();
+            }
+
+            strLatitude = String.valueOf(lattitude);
+            strLongitude = String.valueOf(longitude);
+            GeneralUtils.putStringValueInEditor(getActivity(), "latitude", strLatitude);
+            GeneralUtils.putStringValueInEditor(getActivity(), "longitude", strLongitude);
+        }
+    }
+
+
+    protected void buildAlertMessageNoGps() {
+
+        final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getActivity());
+        builder.setMessage("Please Turn ON your GPS Connection")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, final int id) {
+                        startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, final int id) {
+                        dialog.cancel();
+                    }
+                });
+        final android.app.AlertDialog alert = builder.create();
+        alert.show();
     }
 
 }
