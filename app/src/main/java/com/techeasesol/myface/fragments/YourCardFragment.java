@@ -54,6 +54,9 @@ public class YourCardFragment extends Fragment {
             case 1:
                 view = inflater.inflate(R.layout.custom_layout_card_one, container, false);
                 break;
+            case 2:
+                view = inflater.inflate(R.layout.custom_layout_card_two, container, false);
+                break;
             case 3:
                 view = inflater.inflate(R.layout.custom_layout_card_three, container, false);
                 break;

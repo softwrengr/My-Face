@@ -38,7 +38,7 @@
 
                     <ImageView
                         android:id="@+id/iv_card"
-                        android:layout_width="match_parent"
+                        android:layout_width="100sp"
                         android:layout_height="100sp"
                         android:src="@mipmap/image"/>
 
@@ -48,7 +48,8 @@
                         android:layout_height="30sp"
                         android:layout_marginLeft="20sp"
                         android:src="@mipmap/instagram"
-                        android:layout_alignParentBottom="true"/>
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5sp"/>
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/card_one_in"
@@ -56,6 +57,7 @@
                         android:layout_height="30sp"
                         android:layout_marginLeft="25sp"
                         android:src="@mipmap/card_one_in"
+                        android:layout_marginBottom="5sp"
                         android:layout_toRightOf="@id/card_one_fb"
                         android:layout_alignParentBottom="true"/>
 

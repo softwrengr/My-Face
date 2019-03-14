@@ -13,6 +13,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -30,6 +31,8 @@ public class HomeFragment extends Fragment {
     View view;
     @BindView(R.id.card_one)
     RelativeLayout cardOne;
+    @BindView(R.id.card_two)
+    LinearLayout cardTwo;
     @BindView(R.id.card_three)
     RelativeLayout cardThree;
     @BindView(R.id.card_four)
@@ -76,6 +79,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",1);
+                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+            }
+        });
+
+        cardTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",2);
                 GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
             }
         });

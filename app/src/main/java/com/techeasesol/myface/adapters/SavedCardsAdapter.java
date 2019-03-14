@@ -50,6 +50,10 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
                 view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.custom_layout_card_one, parent, false);
                 return new SavedCardsAdapter.MyViewHolder(view);
+            case 2:
+                view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.custom_layout_card_two, parent, false);
+                return new SavedCardsAdapter.MyViewHolder(view);
             case 3:
                 view = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.custom_layout_card_three, parent, false);
@@ -105,7 +109,7 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
         myViewHolder.ivShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(context, "user_card_id", model.getId()     );
+                GeneralUtils.putIntegerValueInEditor(context, "user_card_id", model.getId());
                 GeneralUtils.connectDrawerFragment(context, new NearPeoplesFragment());
             }
         });
@@ -118,7 +122,7 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivCard,ivShare;
+        ImageView ivCard, ivShare;
         TextView tvName, tvDesignation, tvEmail;
         RelativeLayout layoutSmallInfo;
 

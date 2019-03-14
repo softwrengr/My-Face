@@ -38,6 +38,12 @@
 
             <include
                 android:layout_marginTop="5sp"
+                layout="@layout/custom_layout_card_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include
+                android:layout_marginTop="5sp"
                 layout="@layout/custom_layout_card_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

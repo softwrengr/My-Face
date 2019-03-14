@@ -84,11 +84,11 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_card"
-                        android:layout_width="65sp"
-                        android:layout_height="65sp"
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
                         android:layout_marginLeft="2sp"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/image" />
+                        android:src="@mipmap/instagram" />
 
                     <TextView
                         android:id="@+id/tv_card_name"
