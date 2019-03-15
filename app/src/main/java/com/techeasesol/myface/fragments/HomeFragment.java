@@ -37,6 +37,8 @@ public class HomeFragment extends Fragment {
     RelativeLayout cardThree;
     @BindView(R.id.card_four)
     RelativeLayout cardFour;
+    @BindView(R.id.card_five)
+    LinearLayout cardFive;
     @BindView(R.id.card_six)
     RelativeLayout cardSix;
     @BindView(R.id.card_seven)
@@ -78,83 +80,70 @@ public class HomeFragment extends Fragment {
         cardOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",1);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+               loadEditScreen(1);
             }
         });
 
         cardTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",2);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(2);
             }
         });
 
         cardThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",3);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(3);
             }
         });
 
         cardFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",4);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(4);
+            }
+        });
+
+        cardFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadEditScreen(5);
             }
         });
 
         cardSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",6);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(6);
             }
         });
 
         cardSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",7);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(7);
             }
         });
 
         cardNine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",9);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(9);
             }
         });
 
         cardTen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",10);
-                GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+                loadEditScreen(10);
             }
         });
     }
 
-    private void onback(View view) {
-        view.setFocusableInTouchMode(true);
-        view.requestFocus();
-        view.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-
-                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
-                    getActivity().finish();
-                    return true;
-                }
-                return false;
-            }
-        });
-
+    private void loadEditScreen(int cardNumber){
+        GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",cardNumber);
+        GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
     }
 
     private void showMessage(String message, final String card){
@@ -175,5 +164,22 @@ public class HomeFragment extends Fragment {
             }
         });
         builder.show();
+    }
+
+    private void onback(View view) {
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                    getActivity().finish();
+                    return true;
+                }
+                return false;
+            }
+        });
+
     }
 }
