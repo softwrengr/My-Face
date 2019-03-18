@@ -97,7 +97,7 @@ public class BottomSheetClass extends BottomSheetDialogFragment {
                         JSONObject jObjError = new JSONObject(response.errorBody().string());
                         Toast.makeText(getActivity(), jObjError.getString("message"), Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
-                        Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                       Log.d("error",e.getMessage());
                     }
 
                 } else if (response.body().getStatus()) {

@@ -151,30 +151,35 @@
 
 
                     <ImageView
+                        android:id="@+id/card_fb"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
-                        android:layout_marginRight="5sp"
+                        android:layout_marginRight="10sp"
                         android:src="@mipmap/card_3_facebook" />
 
                     <ImageView
+                        android:id="@+id/card_twitter"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
-                        android:layout_marginRight="5sp"
-                        android:src="@mipmap/twitter" />
+                        android:layout_marginRight="10sp"
+                        android:src="@mipmap/card_3_twitter" />
 
                     <ImageView
+                        android:id="@+id/card_google"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
-                        android:layout_marginRight="5sp"
+                        android:layout_marginRight="10sp"
                         android:src="@mipmap/card_3_google" />
 
                     <ImageView
+                        android:id="@+id/card_insta"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
-                        android:layout_marginRight="5sp"
+                        android:layout_marginRight="10sp"
                         android:src="@mipmap/card_3_insta" />
 
                     <ImageView
+                        android:id="@+id/card_in"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
                         android:src="@mipmap/card_3_in" />

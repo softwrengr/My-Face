@@ -13,7 +13,7 @@
     <!-- side menu text -->
     <string name="home">Home</string>
     <string name="setting">Setting</string>
-    <string name="cards">Cards</string>
+    <string name="cards">Card organizer</string>
     <string name="rate_us">Rate Us</string>
     <string name="logout">Logout</string>
 

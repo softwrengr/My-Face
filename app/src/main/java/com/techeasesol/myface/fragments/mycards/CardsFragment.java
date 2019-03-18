@@ -25,6 +25,7 @@ public class CardsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_cards, container, false);
+        getActivity().setTitle("Card Organizer");
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             String checkFragment = bundle.getString("fragment" );

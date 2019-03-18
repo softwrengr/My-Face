@@ -216,29 +216,34 @@
                     android:orientation="horizontal">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/card_fb"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
                         android:src="@mipmap/card_six_fb" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/card_insta"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
                         android:layout_marginLeft="5sp"
                         android:src="@mipmap/card_six_insta" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/card_in"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
                         android:layout_marginLeft="5sp"
                         android:src="@mipmap/card_six_in" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/card_google"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
                         android:layout_marginLeft="5sp"
                         android:src="@mipmap/card_six_google" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/card_twitter"
                         android:layout_width="30sp"
                         android:layout_height="30sp"
                         android:layout_marginLeft="5sp"

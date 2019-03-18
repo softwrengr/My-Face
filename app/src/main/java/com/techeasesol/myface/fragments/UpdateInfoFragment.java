@@ -61,8 +61,8 @@ public class UpdateInfoFragment extends Fragment {
     EditText etCardEmail;
     @BindView(R.id.et_card_post)
     EditText etCardPost;
-    @BindView(R.id.et_card_number)
-    EditText etCardnumber;
+    @BindView(R.id.et_phone_number)
+    EditText etPhonenumber;
     @BindView(R.id.et_card_address)
     EditText etCardAddress;
     @BindView(R.id.et_card_facebook)
@@ -267,7 +267,7 @@ public class UpdateInfoFragment extends Fragment {
         strEmail = etCardEmail.getText().toString().trim();
         strName = etCardName.getText().toString().trim();
         strPost = etCardPost.getText().toString().trim();
-        strNumber = etCardName.getText().toString().trim();
+        strNumber = etPhonenumber.getText().toString().trim();
         strAddress = etCardAddress.getText().toString().trim();
         strFB = etCardFb.getText().toString().trim();
         strTwitter = etCardTwitter.getText().toString().trim();
@@ -275,6 +275,11 @@ public class UpdateInfoFragment extends Fragment {
         strInstagram = etCardInstagram.getText().toString().trim();
         strSkype = etCardSkype.getText().toString().trim();
         strLinkedin = etCardLinkedIn.getText().toString().trim();
+
+//        strFB = "https://www.facebook.com/"+strFB;
+//        strTwitter = "https://twitter.com/"+strTwitter;
+//        strLinkedin = "https://www.linkedin.com/in/"+strLinkedin;
+//        strInstagram = "https://www.instagram.com/"+strInstagram;
 
         if (sourceFile == null || sourceFile.equals("")) {
             Toast.makeText(getActivity(), "please select image", Toast.LENGTH_SHORT).show();
@@ -291,7 +296,7 @@ public class UpdateInfoFragment extends Fragment {
         }
 
         if (strPost.isEmpty()) {
-            etCardPost.setError("Please enter name");
+            etCardPost.setError("Please enter designation");
             valid = false;
         } else {
             etCardPost.setError(null);
@@ -306,14 +311,14 @@ public class UpdateInfoFragment extends Fragment {
 
 
         if (strNumber.isEmpty()) {
-            etCardName.setError("Please enter name");
+            etPhonenumber.setError("Please enter your phone number");
             valid = false;
         } else {
             etCardName.setError(null);
         }
 
         if (strAddress.isEmpty()) {
-            etCardAddress.setError("Please enter name");
+            etCardAddress.setError("Please enter address");
             valid = false;
         } else {
             etCardAddress.setError(null);

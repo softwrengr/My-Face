@@ -45,7 +45,7 @@
             android:hint="Post/Designation"/>
 
         <EditText
-            android:id="@+id/et_card_number"
+            android:id="@+id/et_phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10sp"
@@ -82,7 +82,7 @@
             android:layout_marginTop="5sp"
             android:background="@mipmap/edit_text"
             android:inputType="text"
-            android:hint="Facebook"/>
+            android:hint="Enter your facebook username"/>
 
         <EditText
             android:id="@+id/et_card_twitter"
@@ -92,7 +92,28 @@
             android:layout_marginTop="5sp"
             android:background="@mipmap/edit_text"
             android:inputType="text"
-            android:hint="Twitter"/>
+            android:hint="Enter your twitter username"/>
+
+        <EditText
+            android:id="@+id/et_card_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:background="@mipmap/edit_text"
+            android:inputType="text"
+            android:hint="Enter your instagram username"/>
+
+
+        <EditText
+            android:id="@+id/et_card_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:layout_marginTop="5sp"
+            android:background="@mipmap/edit_text"
+            android:inputType="text"
+            android:hint="Enter your linkdin username"/>
 
         <EditText
             android:id="@+id/et_card_youtube"
@@ -103,17 +124,6 @@
             android:background="@mipmap/edit_text"
             android:inputType="text"
             android:hint="Youtube"/>
-
-        <EditText
-            android:id="@+id/et_card_instagram"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10sp"
-            android:layout_marginTop="5sp"
-            android:background="@mipmap/edit_text"
-            android:inputType="text"
-            android:hint="Instagram"/>
-
         <EditText
             android:id="@+id/et_card_skype"
             android:layout_width="match_parent"
@@ -123,16 +133,6 @@
             android:background="@mipmap/edit_text"
             android:inputType="text"
             android:hint="Skype"/>
-
-        <EditText
-            android:id="@+id/et_card_in"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10sp"
-            android:layout_marginTop="5sp"
-            android:background="@mipmap/edit_text"
-            android:inputType="text"
-            android:hint="Linked in"/>
 
         <Button
             android:id="@+id/btn_update"
