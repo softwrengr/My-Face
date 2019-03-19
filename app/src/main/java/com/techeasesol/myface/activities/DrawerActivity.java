@@ -23,6 +23,7 @@ import com.techeasesol.myface.fragments.AboutSendFragment;
 import com.techeasesol.myface.fragments.HomeFragment;
 import com.techeasesol.myface.fragments.LoginFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
+import com.techeasesol.myface.fragments.ProfileFragment;
 import com.techeasesol.myface.fragments.RecievedCardFragment;
 import com.techeasesol.myface.fragments.SettingFragment;
 import com.techeasesol.myface.fragments.mycards.CardsFragment;
@@ -89,7 +90,10 @@ public class DrawerActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             GeneralUtils.connectDrawerFragmentWithoutBack(this, new HomeFragment());
-        } else if (id == R.id.nav_cards) {
+        }
+        else if (id == R.id.nav_profile) {
+            GeneralUtils.connectDrawerFragment(this, new ProfileFragment());
+        }else if (id == R.id.nav_cards) {
             GeneralUtils.connectDrawerFragment(this, new CardsFragment());
         } else if (id == R.id.nav_rate_us) {
           rateUs();

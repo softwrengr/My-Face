@@ -5,6 +5,9 @@ import com.techeasesol.myface.models.SignUpDataModels.SignupResponseModel;
 import com.techeasesol.myface.models.acceptedCardsDataModel.AcceptdCardResponseModel;
 import com.techeasesol.myface.models.acceptedCardsDataModel.AcceptedCardStatusModel;
 import com.techeasesol.myface.models.cardStatusDataModels.CardStatusResponseModel;
+import com.techeasesol.myface.models.profileDataModels.ProfileResponseModel;
+import com.techeasesol.myface.models.profileUpdateDataModel.ProfileImageResponseModel;
+import com.techeasesol.myface.models.profileUpdateDataModel.ProfileUpdateResponseModel;
 import com.techeasesol.myface.models.resetPasswordDataModels.ChangePasswordModel;
 import com.techeasesol.myface.models.resetPasswordDataModels.ResetPasswordModel;
 import com.techeasesol.myface.models.resetPasswordDataModels.verifycodemodel.VerifyCodeResponseModel;
@@ -106,6 +109,19 @@ public interface ApiInterface {
     @POST("changePassword")
     Call<ChangePasswordModel> changePassword(@Field("newPassword") String code,
                                              @Field("confirmPassword") String email);
+
+    @GET("userProfile")
+    Call<ProfileResponseModel> getUserProfile();
+
+    @FormUrlEncoded
+    @POST("update-profile")
+    Call<ProfileUpdateResponseModel> updateProfile(@Field("name") String name,
+                                                   @Field("phoneNumber") String number);
+
+    @Multipart
+    @POST("update-profile-picture")
+    Call<ProfileImageResponseModel> updateProfilePicture(@Part MultipartBody.Part photo,
+                                                         @Part("profilePicture") RequestBody fileName);
 
 
 

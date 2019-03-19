@@ -11,6 +11,7 @@
     <string name="action_settings">Settings</string>
 
     <!-- side menu text -->
+    <string name="profle">Profile</string>
     <string name="home">Home</string>
     <string name="setting">Setting</string>
     <string name="cards">Card organizer</string>

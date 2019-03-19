@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UpdateProfileFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_edit_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/image"
+        app:civ_border_color="#EEEEEE"
+        app:civ_border_width="4dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_change_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp"
+        android:layout_below="@id/iv_edit_profile"
+        android:layout_centerVertical="true"
+        android:text="Change Picture"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_change_image"
+        android:textSize="18sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textStyle="bold"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="2sp"
+        android:text="Full Name"/>
+
+    <EditText
+        android:id="@+id/et_edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Full Name"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:paddingBottom="20sp"
+        android:layout_below="@id/tv_fname"
+        android:textColor="@android:color/darker_gray"
+        android:textColorHint="@android:color/darker_gray"
+        app:backgroundTint="@android:color/darker_gray" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_em"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/et_edit_name"-->
+        <!--android:textSize="18sp"-->
+        <!--android:fontFamily="@font/poppins_medium"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:layout_marginRight="20sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:inputType="number"-->
+        <!--android:paddingLeft="2sp"-->
+        <!--android:text="Email"/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/et_edit_email"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Enter Email"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:layout_marginLeft="20sp"-->
+        <!--android:layout_marginRight="20sp"-->
+        <!--android:paddingBottom="20sp"-->
+        <!--android:layout_below="@id/tv_em"-->
+        <!--android:textColor="@android:color/darker_gray"-->
+        <!--android:textColorHint="@android:color/darker_gray"-->
+        <!--app:backgroundTint="@android:color/darker_gray" />-->
+
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_edit_name"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textStyle="bold"
+        android:paddingLeft="2sp"
+        android:text="Phone Number"/>
+
+    <EditText
+        android:id="@+id/et_edit_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number"
+        android:inputType="number"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:paddingBottom="20sp"
+        android:layout_below="@id/tv_no"
+        android:textColor="@android:color/darker_gray"
+        android:textColorHint="@android:color/darker_gray"
+        app:backgroundTint="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/btn_save_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:layout_below="@id/et_edit_number"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:background="@color/colorPrimary"/>
+</RelativeLayout>
