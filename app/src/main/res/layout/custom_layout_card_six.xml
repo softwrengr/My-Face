@@ -88,7 +88,7 @@
                         android:layout_height="60sp"
                         android:layout_marginLeft="2sp"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/instagram" />
+                        android:src="@drawable/pro" />
 
                     <TextView
                         android:id="@+id/tv_card_name"

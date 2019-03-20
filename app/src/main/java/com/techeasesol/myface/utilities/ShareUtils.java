@@ -26,7 +26,10 @@ public class ShareUtils {
     public static String getDeviceToken(Context context) {
         return getSharedPref(context).getString("device_token", "");
     }
-    public static boolean isLoggedIn(Context context) {
-        return getSharedPref(context).getBoolean("loggedIn", false);
+    public static String getCardMessage(Context context) {
+        return getSharedPref(context).getString("card_message", "");
+    }
+    public static String getCardSendID(Context context) {
+        return getSharedPref(context).getString("send_card_id", "");
     }
 }

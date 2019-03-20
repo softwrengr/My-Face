@@ -70,6 +70,7 @@
         android:layout_marginTop="30sp"
         android:layout_marginRight="30sp"
         android:layout_marginLeft="30sp"
+        android:fontFamily="@font/regular"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"/>
 
@@ -87,6 +88,7 @@
             android:layout_height="wrap_content"
             android:text="@string/already"
             android:textSize="18sp"
+            android:fontFamily="@font/regular"
             android:textColor="@color/black" />
 
         <TextView
@@ -97,6 +99,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginLeft="5sp"
+            android:fontFamily="@font/regular"
             android:textColor="@color/colorPrimary"
             android:layout_alignBaseline="@id/already_register"
             android:layout_toRightOf="@id/already_register" />

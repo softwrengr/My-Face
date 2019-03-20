@@ -3,6 +3,7 @@ package com.techeasesol.myface.fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,8 +20,9 @@ import android.widget.Toast;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.techeasesol.myface.R;
-import com.techeasesol.myface.firebase.MyFirebaseMessagingService;
+
 import com.techeasesol.myface.utilities.GeneralUtils;
+import com.techeasesol.myface.utilities.ShareUtils;
 
 import java.io.File;
 
@@ -63,16 +65,16 @@ public class HomeFragment extends Fragment {
     private void initUI(){
         ButterKnife.bind(this,view);
 
-        if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("your Card has been accepted")){
-            showMessage(GeneralUtils.getCardMessage(getActivity()),"message");
+        if(ShareUtils.getCardMessage(getActivity())!=null && ShareUtils.getCardMessage(getActivity()).contains("your Card has been accepted")){
+            showMessage(ShareUtils.getCardMessage(getActivity()),"message");
         }
 
-        if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("your Card has been rejected")){
-            showMessage(GeneralUtils.getCardMessage(getActivity()),"message");
+        if(ShareUtils.getCardMessage(getActivity())!=null && ShareUtils.getCardMessage(getActivity()).contains("your Card has been rejected")){
+            showMessage(ShareUtils.getCardMessage(getActivity()),"message");
         }
 
-        if(GeneralUtils.getCardMessage(getActivity())!=null && GeneralUtils.getCardMessage(getActivity()).contains("You have new card from")){
-            showMessage(GeneralUtils.getCardMessage(getActivity()),"new card");
+        if(ShareUtils.getCardMessage(getActivity())!=null && ShareUtils.getCardMessage(getActivity()).contains("You have new card from")){
+            showMessage(ShareUtils.getCardMessage(getActivity()),"new card");
 
         }
 
@@ -158,7 +160,7 @@ public class HomeFragment extends Fragment {
                     GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
                 }
                 else if(card.equals("message")){
-                    GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
+                    ShareUtils.getEditor(getActivity()).putString("card_message","").commit();
                 }
 
             }

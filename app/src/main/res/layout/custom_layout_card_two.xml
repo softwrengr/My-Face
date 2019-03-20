@@ -31,14 +31,13 @@
                 android:layout_height="140sp"
                 android:background="@mipmap/card_2_back">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_card"
                     android:layout_width="90sp"
                     android:layout_height="90sp"
-                    android:visibility="invisible"
-                    android:layout_centerVertical="true"
+                    android:layout_marginTop="12sp"
                     android:layout_marginLeft="10sp"
-                    android:src="@mipmap/image"/>
+                    android:src="@drawable/pro"/>
 
                 <TextView
                     android:id="@+id/tv_card_name"

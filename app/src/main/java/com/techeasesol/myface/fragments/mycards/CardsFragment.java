@@ -51,6 +51,10 @@ public class CardsFragment extends Fragment {
         btnMyCards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnMyCards.setBackground(getResources().getDrawable(R.drawable.button_state_change));
+                btnSharedCards.setBackground(getResources().getDrawable(R.drawable.black_corner));
+                btnSharedCards.setTextColor(getResources().getColor(R.color.black));
+                btnMyCards.setTextColor(getResources().getColor(R.color.colorPrimary));
                 GeneralUtils.connectCardsFragmentWithBack(getActivity(),new AllSavedCardsFragment());
             }
         });
@@ -58,6 +62,10 @@ public class CardsFragment extends Fragment {
         btnSharedCards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnMyCards.setBackground(getResources().getDrawable(R.drawable.black_corner));
+                btnSharedCards.setBackground(getResources().getDrawable(R.drawable.button_state_change));
+                btnSharedCards.setTextColor(getResources().getColor(R.color.colorPrimary));
+                btnMyCards.setTextColor(getResources().getColor(R.color.black));
                 GeneralUtils.connectCardsFragmentWithBack(getActivity(),new SharedCardsFragment());
             }
         });

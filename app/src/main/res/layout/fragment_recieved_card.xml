@@ -35,7 +35,7 @@
             android:id="@+id/btn_delete_card"
             android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:text="Delete"
+            android:text="Reject"
             android:textColor="@color/white"
             android:background="@drawable/gray_corner"/>
 
@@ -43,7 +43,7 @@
             android:id="@+id/btn_accept_card"
             android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="Accept"
             android:textColor="@color/white"
             android:layout_marginLeft="20sp"
             android:background="@drawable/black_corner"/>

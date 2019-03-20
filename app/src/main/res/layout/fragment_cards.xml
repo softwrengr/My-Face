@@ -15,17 +15,16 @@
      <Button
          android:id="@+id/btn_my_cards"
          android:layout_width="120sp"
-         android:layout_height="wrap_content"
-         android:textColor="@color/colorPrimary"
+         android:layout_height="40sp"
          android:layout_marginLeft="20sp"
          android:textAllCaps="false"
-         android:background="@drawable/gray_corner"
+         android:background="@drawable/button_state_change"
          android:text="My Cards"/>
 
      <Button
          android:id="@+id/btn_shared_cards"
          android:layout_width="120sp"
-         android:layout_height="wrap_content"
+         android:layout_height="40sp"
          android:layout_alignParentEnd="true"
          android:layout_marginLeft="20sp"
          android:background="@drawable/black_corner"

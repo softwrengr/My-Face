@@ -22,6 +22,7 @@
        android:textSize="22sp"
        android:textStyle="bold"
        android:textColor="@color/black"
+       android:fontFamily="@font/poppin_light"
        android:layout_centerHorizontal="true"
        android:layout_marginTop="15sp"/>
 
@@ -57,6 +58,7 @@
         android:layout_marginTop="30sp"
         android:layout_marginRight="30sp"
         android:layout_marginLeft="30sp"
+        android:fontFamily="@font/regular"
         android:background="@color/colorPrimary"
         android:textColor="@color/white"/>
 
@@ -69,13 +71,14 @@
         android:layout_alignParentEnd="true"
         android:textSize="16sp"
         android:gravity="right"
+        android:fontFamily="@font/regular"
         android:layout_marginRight="30sp"
         android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15sp"/>
 
     <View
-        android:layout_width="120sp"
+        android:layout_width="135sp"
         android:layout_height="1sp"
         android:background="@color/black"
         android:layout_below="@id/forgot_password"
@@ -95,6 +98,7 @@
             android:layout_height="wrap_content"
             android:text="@string/not_register"
             android:textSize="18sp"
+            android:fontFamily="@font/regular"
             android:textColor="@color/black" />
 
         <TextView
@@ -105,6 +109,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginLeft="5sp"
+            android:fontFamily="@font/regular"
             android:textColor="@color/colorPrimary"
             android:layout_alignBaseline="@id/not_register"
             android:layout_toRightOf="@id/not_register" />

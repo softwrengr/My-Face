@@ -22,6 +22,7 @@ import com.techeasesol.myface.models.cardDataModel.CardResponseModel;
 import com.techeasesol.myface.models.cardStatusDataModels.CardStatusResponseModel;
 import com.techeasesol.myface.utilities.AlertUtils;
 import com.techeasesol.myface.utilities.GeneralUtils;
+import com.techeasesol.myface.utilities.ShareUtils;
 import com.techeasesol.networking.ApiClient;
 import com.techeasesol.networking.ApiInterface;
 
@@ -56,16 +57,18 @@ public class RecievedCardFragment extends Fragment {
     private void initUI() {
         ButterKnife.bind(this, view);
 
-        if (GeneralUtils.getSendCardID(getActivity()) == null) {
+        if (ShareUtils.getCardSendID(getActivity()) == null) {
             Log.d("error", "card id is null");
         } else {
-            cardID = Integer.parseInt(GeneralUtils.getSendCardID(getActivity()));
+            cardID = Integer.parseInt(ShareUtils.getCardSendID(getActivity()));
         }
 
         btnAcceptCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
+                btnAcceptCard.setBackground(getResources().getDrawable(R.drawable.gray_corner));
+                btnDeleteCard.setBackground(getResources().getDrawable(R.drawable.black_corner));
+                ShareUtils.getEditor(getActivity()).putString("card_message","").commit();
                 alertDialog = AlertUtils.createProgressDialog(getActivity());
                 alertDialog.show();
                 apiCallAcceptRejectCard(cardID, 1);
@@ -75,7 +78,9 @@ public class RecievedCardFragment extends Fragment {
         btnDeleteCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GeneralUtils.putStringValueInEditor(getActivity(),"card_message","");
+                btnAcceptCard.setBackground(getResources().getDrawable(R.drawable.black_corner));
+                btnDeleteCard.setBackground(getResources().getDrawable(R.drawable.gray_corner));
+                ShareUtils.getEditor(getActivity()).putString("card_message","").commit();
                 alertDialog = AlertUtils.createProgressDialog(getActivity());
                 alertDialog.show();
                 apiCallAcceptRejectCard(cardID, 0);
