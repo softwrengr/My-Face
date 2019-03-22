@@ -36,11 +36,11 @@
                     android:gravity="center"
                     android:layout_marginBottom="10sp">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_card"
                         android:layout_width="100sp"
                         android:layout_height="100sp"
-                        android:src="@mipmap/image"/>
+                        android:src="@drawable/pro"/>
 
                     <LinearLayout
                         android:id="@+id/social_one"
@@ -117,7 +117,7 @@
                     android:fontFamily="@font/poppins_medium"
                     android:layout_marginTop="10sp"
                     android:layout_marginLeft="10sp"
-                    android:text="Card Name"/>
+                    android:text="Name"/>
 
                 <TextView
                     android:id="@+id/tv_card_post"
@@ -129,7 +129,7 @@
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:fontFamily="@font/poppin_light"
-                    android:text="Product Developer"/>
+                    android:text="Designation"/>
 
                 <TextView
                     android:id="@+id/tv_card_address"
@@ -141,7 +141,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/thin"
-                    android:text="Your Address"/>
+                    android:text="Address"/>
 
                 <TextView
                     android:id="@+id/tv_card_no"
@@ -153,7 +153,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/thin"
-                    android:text="1111 2222 3333 4444"/>
+                    android:text="Phone"/>
 
                 <TextView
                     android:id="@+id/tv_card_email"
@@ -165,7 +165,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/thin"
-                    android:text="softwrengr@gmail.com"/>
+                    android:text="Email"/>
 
                 <ImageView
                     android:layout_width="match_parent"

@@ -52,7 +52,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Kashif Taj"/>
+                    android:text="Name"/>
 
                 <TextView
                     android:id="@+id/tv_card_post"
@@ -62,7 +62,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/poppin_light"
-                    android:text="Product Developer"/>
+                    android:text="Designation"/>
 
                 <ImageView
                     android:id="@+id/iv_card"
@@ -105,7 +105,7 @@
                         android:layout_toRightOf="@id/iv_card"
                         android:fontFamily="@font/poppin_light"
                         android:maxLines="1"
-                        android:text="Abdullah Khan"
+                        android:text="Phone"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -127,7 +127,7 @@
                         android:layout_marginLeft="5sp"
                         android:fontFamily="@font/poppin_light"
                         android:maxLines="1"
-                        android:text="Softwrengr@gmail.com"
+                        android:text="Email"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -149,7 +149,7 @@
                         android:layout_marginLeft="5sp"
                         android:fontFamily="@font/poppin_light"
                         android:maxLines="1"
-                        android:text="Peshawar"
+                        android:text="Address"
                         android:textSize="14sp" />
                 </LinearLayout>
 

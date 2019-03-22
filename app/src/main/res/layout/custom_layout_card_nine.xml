@@ -39,7 +39,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="20sp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Kashif Taj"
+                        android:text="Name"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -54,7 +54,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/tv_card_name"
                         android:fontFamily="@font/poppin_light"
-                        android:text="Product Developer"/>
+                        android:text="Designation"/>
 
                     <LinearLayout
                         android:id="@+id/social_layout"
@@ -101,7 +101,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_below="@id/tv_card_name"
                             android:fontFamily="@font/poppin_light"
-                            android:text="111 444 555 333"/>
+                            android:text="Phone"/>
 
                         <TextView
                             android:id="@+id/tv_card_address"
@@ -113,7 +113,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_below="@id/tv_card_name"
                             android:fontFamily="@font/poppin_light"
-                            android:text="Your Address"/>
+                            android:text="Address"/>
                         <TextView
                             android:id="@+id/tv_card_email"
                             android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_below="@id/tv_card_name"
                             android:fontFamily="@font/poppin_light"
-                            android:text="softwrengr@gmail.com"/>
+                            android:text="Email"/>
                     </LinearLayout>
 
                     <LinearLayout

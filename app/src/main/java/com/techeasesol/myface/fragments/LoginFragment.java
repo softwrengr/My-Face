@@ -111,7 +111,6 @@ public class LoginFragment extends Fragment {
             }
         });
 
-        Log.d("device_token",ShareUtils.getDeviceToken(getActivity()));
 
     }
 

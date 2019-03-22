@@ -67,7 +67,7 @@
                     android:layout_marginTop="20sp"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_marginLeft="10sp"
-                    android:text="Card Name"/>
+                    android:text="Name"/>
 
                 <TextView
                     android:id="@+id/tv_card_post"
@@ -79,7 +79,7 @@
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:fontFamily="@font/poppin_light"
-                    android:text="Product Developer"/>
+                    android:text="Designation"/>
 
                 <TextView
                     android:id="@+id/tv_card_address"
@@ -91,7 +91,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/thin"
-                    android:text="Your Address"/>
+                    android:text="Address"/>
 
                 <TextView
                     android:id="@+id/tv_card_no"
@@ -103,7 +103,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/thin"
-                    android:text="1111 2222 3333 4444"/>
+                    android:text="Phone"/>
 
                 <TextView
                     android:id="@+id/tv_card_email"
@@ -115,7 +115,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/thin"
-                    android:text="softwrengr@gmail.com"/>
+                    android:text="Email"/>
 
                 <LinearLayout
                     android:id="@+id/layout_social"

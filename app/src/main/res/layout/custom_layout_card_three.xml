@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:gravity="center"
-                    android:text="KASHIF TAJ"
+                    android:text="Name"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_card_name"
                     android:gravity="center"
-                    android:text="Developer"
+                    android:text="Designation"
                     android:textColor="#ffffff"
                     android:fontFamily="@font/poppin_light"
                     android:textSize="16sp"
@@ -116,7 +116,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="Your Address"
+                        android:text="Address"
                         android:textColor="#000000" />
 
                     <TextView
@@ -126,7 +126,7 @@
                         android:layout_weight="1.2"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="12345-67891-12345"
+                        android:text="PHone"
                         android:textColor="#000000" />
 
                     <TextView
@@ -136,7 +136,7 @@
                         android:layout_weight="1.1"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="email@email.com"
+                        android:text="Email"
                         android:textColor="#000000" />
 
                 </LinearLayout>
@@ -145,6 +145,7 @@
                     android:id="@+id/layout_social"
                     android:layout_width="match_parent"
                     android:layout_height="40sp"
+                    android:layout_marginTop="5sp"
                     android:layout_alignParentBottom="true"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">

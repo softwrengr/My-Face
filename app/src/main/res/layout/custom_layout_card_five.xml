@@ -50,7 +50,7 @@
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/poppins_medium"
                         android:layout_marginLeft="10sp"
-                        android:text="Abdullah Khan"/>
+                        android:text="Name"/>
 
                     <TextView
                         android:id="@+id/tv_card_post"
@@ -64,7 +64,7 @@
                         android:textColor="@color/white"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/poppin_light"
-                        android:text="Product Developer"/>
+                        android:text="Designation"/>
 
                     <LinearLayout
                         android:id="@+id/layout_social"
@@ -146,7 +146,7 @@
                             android:gravity="center"
                             android:maxLines="2"
                             android:layout_marginTop="20sp"
-                            android:text="Your Address"
+                            android:text="Address"
                             android:textColor="@color/white" />
 
                     </LinearLayout>
@@ -176,7 +176,7 @@
                             android:gravity="center"
                             android:maxLines="2"
                             android:layout_marginTop="20sp"
-                            android:text="1235-6781-1234"
+                            android:text="Phone"
                             android:textColor="@color/white" />
 
                     </LinearLayout>
@@ -206,7 +206,7 @@
                             android:gravity="center"
                             android:maxLines="2"
                             android:layout_marginTop="20sp"
-                            android:text="email@email.com"
+                            android:text="Email"
                             android:textColor="@color/white" />
 
                     </LinearLayout>
