@@ -42,7 +42,7 @@ public class YourCardFragment extends Fragment {
     View view;
 
     ImageView ivCard;
-    TextView tvCardName, tvCardAddress, tvCardEmail, tvDesignation,tvNumber;
+    TextView tvCardName, tvCardAddress, tvCardEmail, tvDesignation, tvNumber;
     LinearLayout layoutSaveShare, layoutShareCard, layoutSaveCard;
     ImageView ivFacebook, ivGoogle, ivInsta, ivLinkdin, ivTwitter;
     private String token;
@@ -72,6 +72,9 @@ public class YourCardFragment extends Fragment {
                 break;
             case 7:
                 view = inflater.inflate(R.layout.custom_layout_card_seven, container, false);
+                break;
+            case 8:
+                view = inflater.inflate(R.layout.custom_layout_card_eight, container, false);
                 break;
             case 9:
                 view = inflater.inflate(R.layout.custom_layout_card_seven, container, false);

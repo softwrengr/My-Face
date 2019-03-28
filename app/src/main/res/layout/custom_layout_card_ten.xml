@@ -11,18 +11,19 @@
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
         android:elevation="0dp"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="5sp"
         app:cardCornerRadius="5sp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5sp"
             android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/card_ten"
             android:layout_width="match_parent"
-            android:layout_height="250dp">
+            android:layout_height="210dp">
 
             <RelativeLayout
                 android:id="@+id/layout_profile"
@@ -35,6 +36,7 @@
                     android:id="@+id/iv_card"
                     android:layout_width="80sp"
                     android:layout_height="80sp"
+                    android:layout_marginTop="10sp"
                     android:background="@drawable/black_corner"
                     android:src="@mipmap/image" />
 
@@ -49,7 +51,7 @@
                     android:gravity="center"
                     android:text="Name"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -73,11 +75,11 @@
                 android:background="@mipmap/layout_10"
                 android:layout_below="@id/layout_profile">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    />
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--/>-->
 
                 <LinearLayout
                     android:layout_width="wrap_content"

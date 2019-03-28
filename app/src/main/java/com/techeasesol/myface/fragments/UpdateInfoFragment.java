@@ -276,16 +276,6 @@ public class UpdateInfoFragment extends Fragment {
         strSkype = etCardSkype.getText().toString().trim();
         strLinkedin = etCardLinkedIn.getText().toString().trim();
 
-        strName = "Kashif";
-        strEmail = "kashifuop99@gmail.com";
-        strNumber = "03469071820";
-        strAddress = "arbab road";
-        strPost = "Designer";
-
-//        strFB = "https://www.facebook.com/"+strFB;
-//        strTwitter = "https://twitter.com/"+strTwitter;
-//        strLinkedin = "https://www.linkedin.com/in/"+strLinkedin;
-//        strInstagram = "https://www.instagram.com/"+strInstagram;
 
         if (sourceFile == null || sourceFile.equals("")) {
             Toast.makeText(getActivity(), "please select image", Toast.LENGTH_SHORT).show();

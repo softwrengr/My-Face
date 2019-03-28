@@ -77,7 +77,7 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
                 return new AcceptedCardAdapter.MyViewHolder(view);
             case 8:
                 view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.custom_layout_card_seven, parent, false);
+                        .inflate(R.layout.custom_layout_card_eight, parent, false);
                 return new AcceptedCardAdapter.MyViewHolder(view);
             case 9:
                 view = LayoutInflater.from(parent.getContext())

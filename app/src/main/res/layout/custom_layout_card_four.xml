@@ -11,18 +11,19 @@
         app:cardCornerRadius="5sp"
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="5sp"
         android:elevation="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5sp"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/card_four"
                 android:layout_width="wrap_content"
-                android:layout_height="250sp"
+                android:layout_height="210sp"
                 android:layout_margin="5sp"
                 android:background="@mipmap/card_background">
 
@@ -46,15 +47,13 @@
 
                 </LinearLayout>
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_card"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
                     android:layout_below="@id/upper"
                     android:layout_marginTop="20sp"
                     android:layout_marginLeft="20sp"
-                    android:scaleType="fitXY"
-                    android:background="@drawable/black_corner"
                     android:src="@mipmap/card_four_image"/>
 
                 <TextView
@@ -63,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/iv_card"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:layout_marginTop="20sp"
                     android:fontFamily="@font/poppins_medium"
                     android:layout_marginLeft="10sp"

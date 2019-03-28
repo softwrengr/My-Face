@@ -81,7 +81,7 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
                 return new SavedCardsAdapter.MyViewHolder(view);
             case 8:
                 view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.custom_layout_card_seven, parent, false);
+                        .inflate(R.layout.custom_layout_card_eight, parent, false);
                 return new SavedCardsAdapter.MyViewHolder(view);
             case 9:
                 view = LayoutInflater.from(parent.getContext())

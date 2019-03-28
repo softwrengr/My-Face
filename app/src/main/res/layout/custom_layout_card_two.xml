@@ -12,18 +12,19 @@
         app:cardCornerRadius="5sp"
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="5sp"
         android:elevation="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="5sp"
             android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/card_two"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="210sp"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -45,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/iv_card"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     android:textColor="@color/white"
                     android:layout_marginTop="10sp"
                     android:layout_centerHorizontal="true"
@@ -61,7 +62,7 @@
                     android:layout_toRightOf="@id/iv_card"
                     android:layout_marginLeft="10sp"
                     android:textStyle="bold"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:textColor="@color/white"
                     android:layout_centerHorizontal="true"
                     android:fontFamily="@font/poppin_light"
@@ -146,7 +147,8 @@
                         android:layout_marginRight="5sp"
                         android:gravity="center"
                         android:maxLines="2"
-                        android:layout_marginTop="20sp"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10sp"
                         android:text="Address"
                         android:textColor="#000000" />
 
@@ -181,7 +183,8 @@
                         android:layout_marginRight="5sp"
                         android:gravity="center"
                         android:maxLines="2"
-                        android:layout_marginTop="20sp"
+                        android:layout_marginTop="10sp"
+                        android:textSize="14sp"
                         android:text="Phone"
                         android:textColor="#000000" />
 
@@ -216,7 +219,8 @@
                         android:layout_marginRight="5sp"
                         android:gravity="center"
                         android:maxLines="2"
-                        android:layout_marginTop="20sp"
+                        android:layout_marginTop="10sp"
+                        android:textSize="14sp"
                         android:text="Email"
                         android:textColor="#000000" />
 

@@ -45,12 +45,15 @@ public class HomeFragment extends Fragment {
     RelativeLayout cardSix;
     @BindView(R.id.card_seven)
     RelativeLayout cardSeven;
+    @BindView(R.id.card_eight)
+    RelativeLayout cardEight;
     @BindView(R.id.card_nine)
     RelativeLayout cardNine;
     @BindView(R.id.card_ten)
     RelativeLayout cardTen;
 
     int cardID;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -62,19 +65,19 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    private void initUI(){
-        ButterKnife.bind(this,view);
+    private void initUI() {
+        ButterKnife.bind(this, view);
 
-        if(ShareUtils.getCardMessage(getActivity())!=null && ShareUtils.getCardMessage(getActivity()).contains("your Card has been accepted")){
-            showMessage(ShareUtils.getCardMessage(getActivity()),"message");
+        if (ShareUtils.getCardMessage(getActivity()) != null && ShareUtils.getCardMessage(getActivity()).contains("your Card has been accepted")) {
+            showMessage(ShareUtils.getCardMessage(getActivity()), "message");
         }
 
-        if(ShareUtils.getCardMessage(getActivity())!=null && ShareUtils.getCardMessage(getActivity()).contains("your Card has been rejected")){
-            showMessage(ShareUtils.getCardMessage(getActivity()),"message");
+        if (ShareUtils.getCardMessage(getActivity()) != null && ShareUtils.getCardMessage(getActivity()).contains("your Card has been rejected")) {
+            showMessage(ShareUtils.getCardMessage(getActivity()), "message");
         }
 
-        if(ShareUtils.getCardMessage(getActivity())!=null && ShareUtils.getCardMessage(getActivity()).contains("You have new card from")){
-            showMessage(ShareUtils.getCardMessage(getActivity()),"new card");
+        if (ShareUtils.getCardMessage(getActivity()) != null && ShareUtils.getCardMessage(getActivity()).contains("You have new card from")) {
+            showMessage(ShareUtils.getCardMessage(getActivity()), "new card");
 
         }
 
@@ -82,7 +85,7 @@ public class HomeFragment extends Fragment {
         cardOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               loadEditScreen(1);
+                loadEditScreen(1);
             }
         });
 
@@ -128,6 +131,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        cardEight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadEditScreen(8);
+            }
+        });
+
         cardNine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,12 +153,12 @@ public class HomeFragment extends Fragment {
         });
     }
 
-    private void loadEditScreen(int cardNumber){
-        GeneralUtils.putIntegerValueInEditor(getActivity(),"card_id",cardNumber);
-        GeneralUtils.connectDrawerFragment(getActivity(),new UpdateInfoFragment());
+    private void loadEditScreen(int cardNumber) {
+        GeneralUtils.putIntegerValueInEditor(getActivity(), "card_id", cardNumber);
+        GeneralUtils.connectDrawerFragment(getActivity(), new UpdateInfoFragment());
     }
 
-    private void showMessage(String message, final String card){
+    private void showMessage(String message, final String card) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("My Face");
         builder.setMessage(message);
@@ -156,11 +166,10 @@ public class HomeFragment extends Fragment {
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if(card.equals("new card")){
-                    GeneralUtils.connectDrawerFragment(getActivity(),new RecievedCardFragment());
-                }
-                else if(card.equals("message")){
-                    ShareUtils.getEditor(getActivity()).putString("card_message","").commit();
+                if (card.equals("new card")) {
+                    GeneralUtils.connectDrawerFragment(getActivity(), new RecievedCardFragment());
+                } else if (card.equals("message")) {
+                    ShareUtils.getEditor(getActivity()).putString("card_message", "").commit();
                 }
 
             }

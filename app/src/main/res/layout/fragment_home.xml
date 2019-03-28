@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@color/gray"
     tools:context=".fragments.HomeFragment">
 
 
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/choose_card"
         android:layout_marginTop="5sp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppin_light"/>
@@ -69,6 +69,12 @@
             <include
                 android:layout_marginTop="5sp"
                 layout="@layout/custom_layout_card_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include
+                android:layout_marginTop="5sp"
+                layout="@layout/custom_layout_card_eight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
