@@ -1,6 +1,11 @@
 package com.techeasesol.myface.adapters;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -116,12 +121,37 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
         if(model.getInstagram()==null || model.getInstagram().equals("")){
             myViewHolder.ivInsta.setVisibility(View.GONE);
         }
-        if(model.getSkype()==null || model.getSkype().equals("")){
-            myViewHolder.ivGoogle.setVisibility(View.GONE);
-        }
         if(model.getLinkedin()==null || model.getLinkedin().equals("")){
             myViewHolder.ivLinkdin.setVisibility(View.GONE);
         }
+
+        myViewHolder.ivFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(newFacebookIntent(context.getPackageManager(), String.valueOf(model.getFacebook())));
+            }
+        });
+
+        myViewHolder.ivInsta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadinstagram(String.valueOf(model.getInstagram()));
+            }
+        });
+
+        myViewHolder.ivTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadTwitter(String.valueOf(model.getTwitter()));
+            }
+        });
+
+        myViewHolder.ivLinkdin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadLinkdin(String.valueOf(model.getLinkedin()));
+            }
+        });
 
 
     }
@@ -132,7 +162,7 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivFacebook,ivGoogle,ivInsta,ivLinkdin,ivTwitter;
+        ImageView ivFacebook,ivInsta,ivLinkdin,ivTwitter;
         ImageView ivCard,ivShare;
         TextView tvName, tvDesignation, tvEmail,tvPhoneNo,tvAddress;
         RelativeLayout layoutSmallInfo;
@@ -146,12 +176,58 @@ public class AcceptedCardAdapter extends RecyclerView.Adapter<AcceptedCardAdapte
             tvPhoneNo = itemView.findViewById(R.id.tv_card_no);
             ivFacebook = itemView.findViewById(R.id.card_fb);
             ivTwitter = itemView.findViewById(R.id.card_twitter);
-            ivGoogle = itemView.findViewById(R.id.card_google);
             ivInsta = itemView.findViewById(R.id.card_insta);
             ivLinkdin = itemView.findViewById(R.id.card_in);
             tvAddress = itemView.findViewById(R.id.tv_card_address);
 //            layoutSmallInfo = itemView.findViewById(R.id.info_layout);
 //            ivShare = itemView.findViewById(R.id.iv_small_share);
+        }
+    }
+
+    private Intent newFacebookIntent(PackageManager pm, String url) {
+        Uri uri = Uri.parse(url);
+        try {
+            ApplicationInfo applicationInfo = pm.getApplicationInfo("com.facebook.katana", 0);
+            if (applicationInfo.enabled) {
+                uri = Uri.parse("fb://facewebmodal/f?href=" + "https://www.facebook.com/" + url);
+            }
+        } catch (PackageManager.NameNotFoundException ignored) {
+            uri = Uri.parse("fb://facewebmodal/f?href=" + "https://www.facebook.com/");
+        }
+        return new Intent(Intent.ACTION_VIEW, uri);
+    }
+
+    private void loadinstagram(String url) {
+        Uri uri = Uri.parse("https://www.instagram.com/" + url);
+        Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+        likeIng.setPackage("com.instagram.android");
+
+        try {
+            context.startActivity(likeIng);
+        } catch (ActivityNotFoundException e) {
+            context.startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.instagram.com/" + url)));
+        }
+    }
+
+    private void loadTwitter(String url) {
+        try {
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/" + url)));
+        } catch (Exception e) {
+            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/")));
+        }
+    }
+
+    private void loadLinkdin(String url) {
+        Intent intent = null;
+        try {
+            context.getPackageManager().getPackageInfo("com.linkedin.android", 0);
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/" + url));
+        } catch (Exception e) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/"));
+        } finally {
+            context.startActivity(intent);
         }
     }
 }

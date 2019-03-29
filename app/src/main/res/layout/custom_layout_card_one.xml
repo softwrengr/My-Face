@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="5sp"
-        android:layout_marginLeft="5sp"
-        android:layout_marginRight="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
         android:layout_marginTop="5sp"
         android:elevation="0dp">
 
@@ -48,13 +48,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15sp"
                         android:orientation="horizontal">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/card_insta"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
-                            android:layout_marginLeft="20sp"
                             android:src="@mipmap/instagram"
                             android:layout_marginBottom="5sp"/>
 
@@ -62,7 +62,7 @@
                             android:id="@+id/card_in"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
-                            android:layout_marginLeft="10sp"
+                            android:layout_marginLeft="5sp"
                             android:src="@mipmap/card_one_in"
                             android:layout_marginBottom="5sp" />
 
@@ -73,6 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_above="@id/social_one"
+                        android:layout_marginLeft="15sp"
                         android:orientation="horizontal">
 
 
@@ -83,15 +84,9 @@
                             android:layout_height="30sp"
                             android:src="@mipmap/card_one_fb"
                             android:layout_marginBottom="5sp"
-                            android:layout_marginLeft="5sp" />
+                            />
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/card_google"
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:src="@mipmap/google_plus"
-                            android:layout_marginBottom="5sp"
-                            android:layout_marginLeft="6sp" />
+
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/card_twitter"

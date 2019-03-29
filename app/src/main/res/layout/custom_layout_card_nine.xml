@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="5sp"
-        android:layout_marginLeft="5sp"
-        android:layout_marginRight="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
         android:layout_marginTop="5sp"
         android:elevation="0dp">
 
@@ -158,12 +158,6 @@
                             android:layout_marginLeft="5sp"
                             android:src="@mipmap/card_seven_in" />
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/card_google"
-                            android:layout_width="30sp"
-                            android:layout_height="30sp"
-                            android:layout_marginLeft="5sp"
-                            android:src="@mipmap/card_seven_google" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/card_twitter"

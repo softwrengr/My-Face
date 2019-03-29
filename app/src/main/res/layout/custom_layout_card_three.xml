@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="5sp"
-        android:layout_marginLeft="5sp"
-        android:layout_marginRight="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
         android:layout_marginTop="5sp"
         android:elevation="0dp">
 
@@ -174,12 +174,7 @@
                         android:layout_marginRight="10sp"
                         android:src="@mipmap/card_3_twitter" />
 
-                    <ImageView
-                        android:id="@+id/card_google"
-                        android:layout_width="30sp"
-                        android:layout_height="30sp"
-                        android:layout_marginRight="10sp"
-                        android:src="@mipmap/card_3_google" />
+
 
                     <ImageView
                         android:id="@+id/card_insta"

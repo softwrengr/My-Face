@@ -21,6 +21,7 @@
             android:layout_width="80sp"
             android:layout_height="60sp"
             android:src="@mipmap/cam"
+            android:scaleType="fitXY"
             android:layout_marginTop="10sp"
             android:layout_gravity="center"/>
 

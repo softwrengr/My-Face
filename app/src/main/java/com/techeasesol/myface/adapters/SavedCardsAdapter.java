@@ -123,9 +123,6 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
         if (model.getInstagram() == null || model.getInstagram().equals("")) {
             myViewHolder.ivInsta.setVisibility(View.GONE);
         }
-        if (model.getSkype() == null || model.getSkype().equals("")) {
-            myViewHolder.ivGoogle.setVisibility(View.GONE);
-        }
         if (model.getLinkedin() == null || model.getLinkedin().equals("")) {
             myViewHolder.ivLinkdin.setVisibility(View.GONE);
         }
@@ -174,7 +171,7 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivFacebook, ivGoogle, ivInsta, ivLinkdin, ivTwitter;
+        ImageView ivFacebook, ivInsta, ivLinkdin, ivTwitter;
         ImageView ivCard, ivShare;
         TextView tvName, tvDesignation, tvEmail, tvAddress, tvPhoneNo;
         RelativeLayout layoutSmallInfo;
@@ -188,7 +185,6 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
             tvEmail = itemView.findViewById(R.id.tv_card_email);
             ivFacebook = itemView.findViewById(R.id.card_fb);
             ivTwitter = itemView.findViewById(R.id.card_twitter);
-            ivGoogle = itemView.findViewById(R.id.card_google);
             ivInsta = itemView.findViewById(R.id.card_insta);
             ivLinkdin = itemView.findViewById(R.id.card_in);
             tvPhoneNo = itemView.findViewById(R.id.tv_card_no);

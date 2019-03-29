@@ -44,7 +44,7 @@ public class YourCardFragment extends Fragment {
     ImageView ivCard;
     TextView tvCardName, tvCardAddress, tvCardEmail, tvDesignation, tvNumber;
     LinearLayout layoutSaveShare, layoutShareCard, layoutSaveCard;
-    ImageView ivFacebook, ivGoogle, ivInsta, ivLinkdin, ivTwitter;
+    ImageView ivFacebook, ivInsta, ivLinkdin, ivTwitter;
     private String token;
 
     @Override
@@ -97,7 +97,6 @@ public class YourCardFragment extends Fragment {
         ivFacebook = view.findViewById(R.id.card_fb);
         ivTwitter = view.findViewById(R.id.card_twitter);
         ivInsta = view.findViewById(R.id.card_insta);
-        ivGoogle = view.findViewById(R.id.card_google);
         ivLinkdin = view.findViewById(R.id.card_in);
         layoutShareCard = view.findViewById(R.id.layout_share_card);
         layoutSaveCard = view.findViewById(R.id.layout_save_card);
@@ -164,9 +163,6 @@ public class YourCardFragment extends Fragment {
                     }
                     if (response.body().getData().getInstagram() == null || response.body().getData().getInstagram().equals("")) {
                         ivInsta.setVisibility(View.GONE);
-                    }
-                    if (response.body().getData().getSkype() == null || response.body().getData().getSkype().equals("")) {
-                        ivGoogle.setVisibility(View.GONE);
                     }
                     if (response.body().getData().getLinkedin() == null || response.body().getData().getLinkedin().equals("")) {
                         ivLinkdin.setVisibility(View.GONE);
