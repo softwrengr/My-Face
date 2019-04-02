@@ -19,10 +19,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.RecievedCardActivity"></activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".activities.DrawerActivity"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activities.SplashActivity"
             android:noHistory="true">
             <intent-filter>
@@ -32,6 +34,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".activities.MainActivity"
             android:noHistory="true"/>
 

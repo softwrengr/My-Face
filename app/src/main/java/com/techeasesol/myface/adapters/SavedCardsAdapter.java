@@ -18,8 +18,9 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.techeasesol.myface.R;
+import com.techeasesol.myface.fragments.AddCardInfoFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
-import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleDetailModel;
+import com.techeasesol.myface.fragments.UpdateCardInfoFragment;
 import com.techeasesol.myface.models.saveCardDataModel.SaveCardDataModel;
 import com.techeasesol.myface.utilities.GeneralUtils;
 
@@ -127,6 +128,15 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
             myViewHolder.ivLinkdin.setVisibility(View.GONE);
         }
 
+        myViewHolder.ivEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putBooleanValueInEditor(context, "check_fragment", false);
+                GeneralUtils.putIntegerValueInEditor(context, "update_card_id", model.getId());
+                GeneralUtils.connectDrawerFragment(context, new UpdateCardInfoFragment());
+            }
+        });
+
         myViewHolder.ivShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -172,7 +182,7 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivFacebook, ivInsta, ivLinkdin, ivTwitter;
-        ImageView ivCard, ivShare;
+        ImageView ivCard, ivShare, ivEdit;
         TextView tvName, tvDesignation, tvEmail, tvAddress, tvPhoneNo;
         RelativeLayout layoutSmallInfo;
 
@@ -191,6 +201,7 @@ public class SavedCardsAdapter extends RecyclerView.Adapter<SavedCardsAdapter.My
             tvAddress = itemView.findViewById(R.id.tv_card_address);
             layoutSmallInfo = itemView.findViewById(R.id.info_layout);
             ivShare = itemView.findViewById(R.id.iv_small_share);
+            ivEdit = itemView.findViewById(R.id.iv_small_edit);
         }
     }
 

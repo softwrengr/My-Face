@@ -1,30 +1,20 @@
 package com.techeasesol.myface.fragments;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.google.firebase.messaging.FirebaseMessagingService;
 import com.techeasesol.myface.R;
 
 import com.techeasesol.myface.utilities.GeneralUtils;
 import com.techeasesol.myface.utilities.ShareUtils;
-
-import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -154,8 +144,8 @@ public class HomeFragment extends Fragment {
     }
 
     private void loadEditScreen(int cardNumber) {
-        GeneralUtils.putIntegerValueInEditor(getActivity(), "card_id", cardNumber);
-        GeneralUtils.connectDrawerFragment(getActivity(), new UpdateInfoFragment());
+        GeneralUtils.putIntegerValueInEditor(getActivity(), "main_card_id", cardNumber);
+        GeneralUtils.connectDrawerFragment(getActivity(), new AddCardInfoFragment());
     }
 
     private void showMessage(String message, final String card) {

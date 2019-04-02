@@ -70,20 +70,37 @@ public interface ApiInterface {
 
     @Multipart
     @POST("addCardDetail")
-    Call<AddCardResponseModel> updateCard(@Part("cardNumber") int id,
-                                          @Part("name") RequestBody name,
-                                          @Part("phoneNumber") RequestBody number,
-                                          @Part("email") RequestBody email,
-                                          @Part("designation") RequestBody password,
-                                          @Part("address") RequestBody passwordConfirmation,
-                                          @Part("facebook") RequestBody phoneNumber,
-                                          @Part("twitter") RequestBody deviceType,
-                                          @Part("instagram") RequestBody lat,
-                                          @Part("linkedin") RequestBody lon,
-                                          @Part("skype") RequestBody skype,
-                                          @Part("youtube") RequestBody youtube,
-                                          @Part MultipartBody.Part photo,
-                                          @Part("picture") RequestBody fileName);
+    Call<AddCardResponseModel> addCardInfo(@Part("cardNumber") int id,
+                                           @Part("name") RequestBody name,
+                                           @Part("phoneNumber") RequestBody number,
+                                           @Part("email") RequestBody email,
+                                           @Part("designation") RequestBody password,
+                                           @Part("address") RequestBody passwordConfirmation,
+                                           @Part("facebook") RequestBody phoneNumber,
+                                           @Part("twitter") RequestBody deviceType,
+                                           @Part("instagram") RequestBody lat,
+                                           @Part("linkedin") RequestBody lon,
+                                           @Part("skype") RequestBody skype,
+                                           @Part("youtube") RequestBody youtube,
+                                           @Part MultipartBody.Part photo,
+                                           @Part("picture") RequestBody fileName);
+
+    @Multipart
+    @POST("updateCardDetail")
+    Call<AddCardResponseModel> updateCardInfo(@Part("id") int id,
+                                              @Part("name") RequestBody name,
+                                              @Part("phoneNumber") RequestBody number,
+                                              @Part("email") RequestBody email,
+                                              @Part("designation") RequestBody password,
+                                              @Part("address") RequestBody passwordConfirmation,
+                                              @Part("facebook") RequestBody phoneNumber,
+                                              @Part("twitter") RequestBody deviceType,
+                                              @Part("instagram") RequestBody lat,
+                                              @Part("linkedin") RequestBody lon,
+                                              @Part("skype") RequestBody skype,
+                                              @Part("youtube") RequestBody youtube,
+                                              @Part MultipartBody.Part photo,
+                                              @Part("picture") RequestBody fileName);
 
     @GET("getSavedCards")
     Call<SaveCardResponseModel> savedCards();
@@ -122,7 +139,6 @@ public interface ApiInterface {
     @POST("update-profile-picture")
     Call<ProfileImageResponseModel> updateProfilePicture(@Part MultipartBody.Part photo,
                                                          @Part("profilePicture") RequestBody fileName);
-
 
 
     //use this for query request

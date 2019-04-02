@@ -43,7 +43,7 @@ public class YourCardFragment extends Fragment {
 
     ImageView ivCard;
     TextView tvCardName, tvCardAddress, tvCardEmail, tvDesignation, tvNumber;
-    LinearLayout layoutSaveShare, layoutShareCard, layoutSaveCard;
+    LinearLayout layoutSaveShare, layoutShareCard, layoutSaveCard, layoutEditCard;
     ImageView ivFacebook, ivInsta, ivLinkdin, ivTwitter;
     private String token;
 
@@ -100,6 +100,7 @@ public class YourCardFragment extends Fragment {
         ivLinkdin = view.findViewById(R.id.card_in);
         layoutShareCard = view.findViewById(R.id.layout_share_card);
         layoutSaveCard = view.findViewById(R.id.layout_save_card);
+        layoutEditCard = view.findViewById(R.id.layout_edit_card);
 
         initUI();
 
@@ -130,6 +131,14 @@ public class YourCardFragment extends Fragment {
             }
         });
 
+        layoutEditCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GeneralUtils.putBooleanValueInEditor(getActivity(),"check_fragment",true);
+                GeneralUtils.connectDrawerFragment(getActivity(), new UpdateCardInfoFragment());
+            }
+        });
+
     }
 
     private void apiCallCardDetail() {
@@ -148,6 +157,7 @@ public class YourCardFragment extends Fragment {
                     }
 
                 } else if (response.body().getStatus()) {
+                    GeneralUtils.putIntegerValueInEditor(getActivity(), "update_card_id", response.body().getData().getId());
                     Glide.with(getActivity()).load(response.body().getData().getPicture()).into(ivCard);
                     tvCardName.setText(response.body().getData().getName());
                     tvCardAddress.setText(response.body().getData().getAddress());

@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.techeasesol.myface.R;
 import com.techeasesol.myface.adapters.NearPeopleAdapter;
 import com.techeasesol.myface.adapters.SavedCardsAdapter;
 import com.techeasesol.myface.classes.BottomSheetClass;
+import com.techeasesol.myface.fragments.HomeFragment;
 import com.techeasesol.myface.fragments.NearPeoplesFragment;
 import com.techeasesol.myface.models.nearPeoplesDataModels.NearPeopleResponseModel;
 import com.techeasesol.myface.models.saveCardDataModel.SaveCardDataModel;
@@ -56,6 +58,7 @@ public class AllSavedCardsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_my_all_cards, container, false);
+        onback(view);
         initUI();
         return view;
     }
@@ -107,5 +110,21 @@ public class AllSavedCardsFragment extends Fragment {
         });
     }
 
+    private void onback(View view) {
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                    GeneralUtils.connectDrawerFragmentWithoutBack(getActivity(),new HomeFragment());
+                    return true;
+                }
+                return false;
+            }
+        });
+
+    }
 
 }

@@ -204,6 +204,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_small_edit"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_toLeftOf="@id/iv_small_share"
+                    android:src="@mipmap/edit_small"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20sp"/>
+
+
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_small_share"
@@ -244,6 +254,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save Card"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_edit_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:src="@drawable/edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Card"
                 android:textSize="16sp" />
         </LinearLayout>
 
